@@ -38,12 +38,12 @@ const Navbar = () => {
       }}
     >
       <div className="w-full max-w-7xl mx-auto text-white">
-        <div className="py-4 flex items-center justify-between px-6 md:px-0">
+        <div className="py-6 flex items-center justify-between px-6 md:px-0">
           
           {/* Logo + Desktop Menu */}
           <div className="flex gap-10 items-center">
             <div className="flex items-center gap-2">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2 17L12 22L22 17" stroke="#1bf1a1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M2 12L12 17L22 12" stroke="#1bf1a1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#1bf1a1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -52,7 +52,7 @@ const Navbar = () => {
             </div>
 
             {/* DESKTOP MENU LINKS */}
-            <ul className="hidden md:flex items-center gap-10 text-sm">
+            <ul className="hidden md:flex items-center gap-10 text-[16px] font-medium">
               <li 
                 onClick={() => handleScrollTo("why-cryptix")} 
                

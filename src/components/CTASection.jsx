@@ -31,13 +31,13 @@ const CTASection = () => {
             <div className="relative z-10 max-w-3xl mx-auto space-y-6">
               
               {/* Heading */}
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-[1.1]">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-white leading-[1.1]">
                 Ready to take control <br className="hidden md:block" />
                 of your crypto?
               </h2>
 
               {/* Subtext */}
-              <p className="text-zinc-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+              <p className="text-zinc-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed font-medium">
                 Join thousands of users who trust Cryptix for secure, seamless, <br className="hidden md:block" />
                 and efficient cryptocurrency transactions.
               </p>

@@ -18,19 +18,19 @@ const HowItWorksSection = () => {
 
           {/* Left side */}
           <div className="border-r border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
-            <h2 className="text-3xl sm:text-4xl font-semibold mb-2">How It Works</h2>
-            <p className="text-gray-400 text-base">
+            <h2 className="text-3xl sm:text-4xl font-medium mb-4">How It Works</h2>
+            <p className="text-white text-base">
               A simple, fast, and secure platform to manage your cryptocurrencies in just a few steps.
             </p>
           </div>
 
           {/* Right side CTA */}
-          <div className="w-full lg:w-[52.2%]">
-            <div className="border-b border-gray-800 p-5 w-full"></div>
+          <div className="w-full lg:w-[52.2%] border-l border-gray-800">
+            <div className="border-b border-gray-800 py-9 w-full"></div>
 
             <a
               href="#"
-              className="hidden md:flex gap-2 justify-end items-center p-5 text-green-400 hover:text-green-300 font-medium whitespace-nowrap w-full transition-all duration-700 ease-out"
+              className="hidden md:flex gap-2 justify-end items-center p-5 text-green-400 hover:text-green-300 font-medium whitespace-nowrap w-full transition-all duration-700 ease-out hover:bg-[rgb(51 195 69 / 5%)]"
             >
               Create account now
               <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -115,7 +115,7 @@ const StepCard = ({ number, title, description, image }) => {
           ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
         `}
       >
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        <h3 className="text-xl font-medium mb-2">{title}</h3>
         <p className="text-gray-400 text-base font-medium">{description}</p>
       </div>
     </div>

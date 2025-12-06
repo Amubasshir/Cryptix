@@ -85,18 +85,18 @@ const TestimonialGrid = () => {
   const words = currentTestimonial.quote.split(" ");
 
   return (
-    <div className="w-full border-t border-b border-gray-800 text-white font-sans selection:bg-white/20" id='TestimonialGrid'>
+    <div className="w-full border-t border-b border-gray-800 text-white  selection:bg-white/20" id='TestimonialGrid'>
       
       <div className=" border-x border-white/10">
         
         {/* Header Section */}
         <div className=" text-center border-b border-white/10 px-6">
-      <div className="py-20 text-center  border-l border-r max-w-7xl mx-auto  border-white/10 ">
-       <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-4 text-white">
+      <div className="py-15 text-center  border-l border-r max-w-7xl mx-auto  border-white/10 ">
+       <h2 className="text-3xl md:text-4xl font-medium leading-9 mb-4 text-white">
             Trusted by Crypto Enthusiasts Worldwide
           </h2>
-          <p className="text-zinc-400 text-sm md:text-base max-w-2xl mx-auto">
-            Join a growing community of investors who choose Cryptix for its seamless experience.
+          <p className="text-zinc-400 text-sm md:text-base leading-9 font-medium max-w-6xl mx-auto">
+           Join a growing community of investors who choose Cryptix for its seamless experience, security, and premium design.
           </p>
           </div>
         </div>
@@ -150,8 +150,8 @@ const TestimonialGrid = () => {
                     <div className="font-bold text-white text-lg">{currentTestimonial.name}</div>
                     <div className="text-zinc-500 text-sm mt-1">{currentTestimonial.role}</div>
                   </div>
-                  <div className="text-zinc-600 text-sm font-mono bg-white/5 px-3 py-1 rounded-full border border-white/5">
-                    {currentIndex + 1} / {testimonials.length}
+                  <div className="text-zinc-600 text-sm font-mono  px-3 py-1  ">
+                    {currentIndex + 1}/{testimonials.length}
                   </div>
                 </motion.div>
 
