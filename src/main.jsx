@@ -2,9 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import Navbar from './components/NavBar.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <div className='bg-[#0E0E12] dm-sans' >
+    <StrictMode>
+       <Navbar></Navbar> 
     <App />
   </StrictMode>,
+ </div>
 )
