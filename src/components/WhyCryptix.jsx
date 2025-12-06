@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Shield, Zap, TrendingUp, MonitorPlay } from "lucide-react";
+// UPDATED ICONS to match your screenshot
+import { Home, Zap, Minimize2, Monitor } from "lucide-react";
 import { motion } from "framer-motion";
 
 // Animation Variant
@@ -22,22 +23,24 @@ const FeatureCard = ({ icon: Icon, title, description, delay }) => (
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true, margin: "-50px" }}
-    className="flex flex-col items-start p-6 md:p-8 border-b md:border-b-0 border-gray-800 md:border-r last:border-r-0 hover:bg-white/[0.02] transition-colors duration-300 h-full"
+    className="flex flex-col items-start p-6 md:p-8 border-b md:border-b-0 border-gray-800 md:border-r last:border-r-0 hover:bg-white/[0.02] transition-colors duration-300 h-full group"
   >
-    <div className="p-3 mb-4 rounded-lg bg-gray-800/50 border border-gray-700 group-hover:border-[#1bf1a1]/50 transition-colors">
-      <Icon className="w-6 h-6 text-[#1bf1a1]" />
+    {/* Icon Container with Round Shape (from image) */}
+    <div className="w-18 h-18 mb-6 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center group-hover:border-white/20 transition-colors">
+      <Icon strokeWidth={1.5} className="w-7 h-7 text-white" />
     </div>
-    <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
-    <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
+    
+    <h3 className="text-xl font-semibold mb-3 text-white">{title}</h3>
+    <p className="text-sm text-gray-400 leading-relaxed max-w-xs">{description}</p>
   </motion.div>
 );
 
 const WhyCryptix = () => {
   return (
-    <section id="why-cryptix" className="w-full  pt-24  text-white">
+    <section id="why-cryptix" className="w-full pt-24 text-white ">
       
       {/* Header Text */}
-      <div className="text-center px-6">
+      <div className="text-center px-6 mb-16">
         <motion.h2
           variants={fadeUp(0.1)}
           initial="hidden"
@@ -60,33 +63,42 @@ const WhyCryptix = () => {
       </div>
 
       {/* Grid Section */}
-      <div className="border-t border-b border-gray-800 mt-16">
+      <div className="border-t border-b border-gray-800">
         <div className="max-w-7xl mx-auto border-x border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            
+            {/* 1. Home Icon for 'Maximum Security' (Visual match) */}
             <FeatureCard
-              icon={Shield}
+              icon={Home} 
               title="Maximum Security"
               description="Your assets are protected with cutting-edge security protocols."
               delay={0.35}
             />
+            
+            {/* 2. Zap Icon for 'Instant Transactions' */}
             <FeatureCard
               icon={Zap}
               title="Instant Transactions"
               description="Execute your transactions in real-time, without delays."
               delay={0.45}
             />
+            
+            {/* 3. Minimize2 Icon for 'Optimized Fees' (Arrows pointing in) */}
             <FeatureCard
-              icon={TrendingUp}
+              icon={Minimize2}
               title="Optimized Fees"
               description="Benefit from some of the lowest fees on the market."
               delay={0.55}
             />
+            
+            {/* 4. Monitor Icon for 'Premium Interface' */}
             <FeatureCard
-              icon={MonitorPlay}
+              icon={Monitor}
               title="Premium Interface"
               description="An elegant, intuitive design that's easy to use, even for beginners."
               delay={0.65}
             />
+
           </div>
         </div>
       </div>

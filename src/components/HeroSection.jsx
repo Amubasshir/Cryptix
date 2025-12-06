@@ -111,10 +111,10 @@ const HeroSection = () => {
         animate={isInView ? "visible" : "hidden"}
         className="max-w-4xl mx-auto px-6 text-center mt-24"
       >
-        <p className="text-zinc-300 text-2xl md:text-3xl lg:text-4xl font-light leading-snug">
+        <p className="text-zinc-300 text-2xl md:text-3xl lg:text-4xl font-medium leading-snug">
           Simplicity, performance, and security, <br />
           empowering you to navigate the digital world <br />
-          <span className="text-white font-medium">with confidence and agility.</span>
+          <span className="text-white ">with confidence and agility.</span>
         </p>
       </motion.div>
     </section>

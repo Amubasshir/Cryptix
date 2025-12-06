@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-full text-white border-t border-white/10 font-sans">
+    <footer className="w-full text-white border-t border-white/10 ">
       
       {/* Container with vertical borders to match previous sections */}
       <div className="max-w-7xl mx-auto border-x border-white/10">
