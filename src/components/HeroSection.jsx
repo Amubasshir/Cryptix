@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ArrowUpRight } from "lucide-react"; // Imported the missing icon
+import { ArrowUpRight } from "lucide-react";
 
 // Blur + fade + upward motion variant
 const blurFadeUp = (delay = 0) => ({
@@ -24,7 +24,7 @@ const HeroSection = () => {
   const isInView = useInView(heroRef, { once: true, margin: "-50px" });
 
   return (
-    <section className="w-full text-white pt-24 pb-20  overflow-hidden" ref={heroRef}>
+    <section className="w-full text-white pt-24 pb-20 overflow-hidden" ref={heroRef}>
       <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
 
         {/* 1. Main Title */}
@@ -80,28 +80,44 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* 5. Dashboard Preview with Laser Effect */}
+      {/* 5. Dashboard Preview (Full Image Width Animation) */}
       <motion.div
         variants={blurFadeUp(0.7)}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         className="mt-20 flex justify-center px-4"
       >
-        <div className="relative max-w-6xl w-full">
-          
-          {/* Top Glow (Ambient) */}
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-[#1bf1a1]/20 blur-[80px] rounded-full -z-10"></div>
-          
-          {/* Laser Line on Top Border */}
-          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#1bf1a1] to-transparent opacity-70 z-20"></div>
+        {/* Container: max-w-7xl & overflow-hidden (Important) */}
+       <div className="relative max-w-7xl w-full rounded-xl border border-white/10 shadow-2xl  overflow-hidden">
+  
+ 
+  <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-[#1bf1a1]/40 blur-[60px] rounded-full pointer-events-none"></div>
+  
+  
+  <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#1bf1a1] to-transparent z-20 opacity-80"></div>
 
-          {/* Image */}
-          <img
-            src="https://framerusercontent.com/images/6AfF1TCZ0fgDvIyRPSrmwJXP9Hc.png?width=2880&height=1770"
-            alt="Dashboard preview"
-            className="relative rounded-xl border border-white/10 w-full shadow-2xl bg-[#0a0a0a]"
-          />
-        </div>
+  
+  <motion.div
+    className="absolute top-0 h-[2px] w-[200px] bg-gradient-to-r from-transparent via-[#ffffff] to-transparent z-30"
+    style={{ boxShadow: "0 0 20px #1bf1a1, 0 0 10px white" }}
+    initial={{ left: "-200px" }} 
+    animate={{ left: "100%" }} 
+    transition={{
+      duration: 3,
+      ease: "linear",
+      repeat: Infinity,
+      repeatDelay: 0
+    }}
+  />
+
+  {/* Image */}
+  {/* Image-এ 'relative z-10' দিন যাতে এটি গ্লো-এর উপরে থাকে */}
+  <img
+    src="https://framerusercontent.com/images/6AfF1TCZ0fgDvIyRPSrmwJXP9Hc.png?width=2880&height=1770"
+    alt="Dashboard preview"
+    className="relative z-10 w-full h-auto opacity-90"
+  />
+</div>
       </motion.div>
 
       {/* 6. Bottom Statement Text */}
