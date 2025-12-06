@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="w-full text-white border-t border-white/10 ">
       
       {/* Container with vertical borders to match previous sections */}
-      <div className="max-w-7xl mx-auto border-x border-white/10">
+      <div className="max-w-[1184px] mx-auto border-x border-white/10">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 px-6 py-16 md:px-12 md:py-20">
           

@@ -91,7 +91,7 @@ const TestimonialGrid = () => {
         
         {/* Header Section */}
         <div className=" text-center border-b border-white/10 px-6">
-      <div className="py-15 text-center  border-l border-r max-w-7xl mx-auto  border-white/10 ">
+      <div className="py-15 text-center  border-l border-r max-w-[1184px] mx-auto  border-white/10 ">
        <h2 className="text-3xl md:text-4xl font-medium leading-9 mb-4 text-white">
             Trusted by Crypto Enthusiasts Worldwide
           </h2>
@@ -100,13 +100,13 @@ const TestimonialGrid = () => {
           </p>
           </div>
         </div>
-          <div className="max-w-7xl mx-auto border-x border-white/10">
+          <div className="max-w-[1184px] mx-auto border-x border-white/10">
         {/* Grid Section */}
         <div className="grid grid-cols-1 lg:grid-cols-3 min-h-[480px]">
           
           {/* Left: Active Testimonial Card */}
-          <div className="lg:col-span-2 p-8 md:p-12  lg:border-r border-white/10 relative bg-gradient-to-br from-white/[0.02] to-transparent overflow-hidden">
-            
+          <div className="lg:col-span-2 p-8 md:p-12  lg:border-r border-white/10 relative  overflow-hidden">
+               <div className="absolute -top-60 -left-50 w-[600px] h-[600px] bg-[#3f3f3f] opacity-10 blur-[150px] rounded-full pointer-events-none"></div>
             <AnimatePresence mode='wait'>
               <motion.div 
                 key={currentIndex}

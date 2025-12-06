@@ -1,83 +1,20 @@
-import { ArrowUpRight } from 'lucide-react';
 import React, { useRef, useState, useEffect } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
-const HowItWorksSection = () => {
-  const [ref, visible] = useInView();
-
-  return (
-    <section className="text-white border-t border-b border-gray-800" id='how-it-works'>
-
-      {/* Header */}
-      <div className="border-b border-gray-800">
-        <div
-          ref={ref}
-          className={`max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-end border-l border-r border-gray-800 transition-all duration-700 ease-out
-            ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
-          `}
-        >
-
-          {/* Left side */}
-          <div className="border-r border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
-            <h2 className="text-3xl sm:text-4xl font-medium mb-4">How It Works</h2>
-            <p className="text-white text-base">
-              A simple, fast, and secure platform to manage your cryptocurrencies in just a few steps.
-            </p>
-          </div>
-
-          {/* Right side CTA */}
-          <div className="w-full lg:w-[52.2%] border-l border-gray-800">
-            <div className="border-b border-gray-800 py-9 w-full"></div>
-
-            <a
-              href="#"
-              className="hidden md:flex gap-2 justify-end items-center p-5 text-green-400 hover:text-green-300 font-medium whitespace-nowrap w-full transition-all duration-700 ease-out hover:bg-[rgb(51 195 69 / 5%)]"
-            >
-              Create account now
-              <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-      {/* Three Steps */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-800 border-l border-r border-gray-800">
-
-        <StepCard
-          number="1"
-          title="Create your account"
-          description="Sign up easily and secure your profile in just a few steps."
-          image="https://framerusercontent.com/images/8RXktcqw0OFHZYhz2pBHj5wAQ.png?scale-down-to-1024&width=1440&height=1080"
-        />
-
-        <StepCard
-          number="2"
-          title="Fund your wallet"
-          description="Add funds securely using your preferred payment method."
-          image="https://framerusercontent.com/images/h8kNOBrYHUwyj1XhxL3Hi3k.png?scale-down-to-1024&width=1440&height=1080"
-        />
-
-        <StepCard
-          number="3"
-          title="Buy, sell, or convert"
-          description="Start trading cryptocurrencies instantly and safely."
-          image="https://framerusercontent.com/images/miiIJ7oMUdFOKJLBBVDKoDIlS4.png?scale-down-to-1024&width=1440&height=1080"
-        />
-
-      </div>
-    </section>
-  );
-};
-
-// Hook for in-view detection
+// Custom Hook for detecting when an element is in view
 const useInView = () => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => entry.isIntersecting && setVisible(true),
-      { threshold: 0.25 }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(entry.target); // Trigger only once
+        }
+      },
+      { threshold: 0.2 }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -86,37 +23,115 @@ const useInView = () => {
   return [ref, visible];
 };
 
-const StepCard = ({ number, title, description, image }) => {
+const HowItWorksSection = () => {
+  const [headerRef, headerVisible] = useInView();
+
+  return (
+    <section className="bg-[#050505] text-white border-t border-b border-gray-800" id='how-it-works'>
+
+      {/* Header Section */}
+        <div className="border-b border-gray-800">
+             <div
+               ref={headerRef}
+               className={`max-w-[1184px] mx-auto flex flex-col lg:flex-row items-start lg:items-end border-l border-r border-gray-800 transition-all duration-700 ease-out
+                 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
+               `}
+             >
+     
+               {/* Left side */}
+               <div className="border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
+                 {/* UPDATED: Responsive Text Sizes */}
+                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-4 tracking-tight">
+                   Your Questions, Answered
+                 </h2>
+                 {/* UPDATED: Responsive Text Sizes */}
+                 <p className="text-white text-sm md:text-base lg:text-lg leading-relaxed text-gray-400">
+                   Find everything you need to know about Cryptix, from security to supported assets.
+                 </p>
+               </div>
+     
+               {/* Right side CTA */}
+               <div className="w-full lg:w-[52.2%] border-l border-gray-800">
+                 <div className="border-b border-gray-800 py-9 w-full"></div>
+     
+                 <a
+                   href="#"
+                   className="hidden md:flex gap-2 justify-end items-center p-5 text-green-400 hover:text-green-300 font-medium whitespace-nowrap w-full transition-all duration-700 ease-out hover:bg-[rgb(51 195 69 / 5%)]"
+                 >
+                   Create account now
+                   <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                 </a>
+               </div>
+     
+             </div>
+           </div>
+
+      {/* Three Steps Grid */}
+      <div className="max-w-[1184px] mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-800 border-l border-r border-gray-800 bg-[#05090a]">
+
+        <StepCard
+          number="1"
+          title="Create your account"
+          description="Sign up easily and secure your profile in just a few steps."
+          image="https://framerusercontent.com/images/8RXktcqw0OFHZYhz2pBHj5wAQ.png?scale-down-to-1024&width=1440&height=1080"
+          delay={0}
+        />
+
+        <StepCard
+          number="2"
+          title="Fund your wallet"
+          description="Add funds securely using your preferred payment method."
+          image="https://framerusercontent.com/images/h8kNOBrYHUwyj1XhxL3Hi3k.png?scale-down-to-1024&width=1440&height=1080"
+          delay={100}
+        />
+
+        <StepCard
+          number="3"
+          title="Buy, sell, or convert"
+          description="Start trading cryptocurrencies instantly and safely."
+          image="https://framerusercontent.com/images/miiIJ7oMUdFOKJLBBVDKoDIlS4.png?scale-down-to-1024&width=1440&height=1080"
+          delay={200}
+        />
+
+      </div>
+    </section>
+  );
+};
+
+const StepCard = ({ number, title, description, image, delay }) => {
   const [ref, visible] = useInView();
 
   return (
-    <div className="relative">
+    <div className="relative group">
 
-      {/* Image */}
-      <div className="relative mb-6 overflow-hidden">
+      {/* Image Area */}
+      <div className="relative mb-6 overflow-hidden bg-[#080808]">
+        {/* Image with Scale on Hover */}
         <img
           src={image}
-          alt=""
-          className="w-full rounded-lg scale-110"
+          alt={title}
+          className="w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
 
-        <span className="absolute top-3 left-3 bg-[#08070E] backdrop-blur-sm p-2 h-10 w-10 
-                         text-sm font-semibold text-white rounded-full flex items-center justify-center">
+        {/* Number Badge with Inner Shadow */}
+        <span className="absolute top-4 left-4 backdrop-blur-md bg-black/40 p-2 h-12 w-12 text-lg font-semibold text-white rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,0.1)] border border-white/5">
           {number}
         </span>
 
-        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#0E0E12] to-transparent rounded-b-lg"></div>
+        {/* Bottom Gradient Fade */}
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#05090a] to-transparent"></div>
       </div>
 
-      {/* Text with animation */}
+      {/* Text Area with Fade Up Animation */}
       <div
         ref={ref}
-        className={`-mt-5 p-5 transition-all duration-700 ease-out
+        style={{ transitionDelay: `${delay}ms` }}
+        className={`px-6 pb-10 pt-2 transition-all duration-700 ease-out transform
           ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
         `}
       >
-        <h3 className="text-xl font-medium mb-2">{title}</h3>
-        <p className="text-gray-400 text-base font-medium">{description}</p>
+        <h3 className="text-xl font-medium mb-3 text-white">{title}</h3>
+        <p className="text-gray-400 text-base leading-relaxed">{description}</p>
       </div>
     </div>
   );

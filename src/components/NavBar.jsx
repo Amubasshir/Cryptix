@@ -11,9 +11,9 @@ const Navbar = () => {
   }, []);
 
   // Tailwind classes for hover + background
-  const buttonClass = `px-4 py-2 rounded-lg transition-colors duration-300 ${
+  const buttonClass = `px-4 py-2 rounded-full transition-colors duration-300 cursor-pointer ${
     scrolled
-      ? "bg-[#00ffb2] text-black  hover:shadow-[0_0_20px_#00ffb2]" 
+      ? "bg-[#00ffb2] text-black  hover:shadow-[0px_0px_0px_5px_#00ffb27a]" 
       : " hover:bg-white/20 text-white"
   }`;
 
@@ -29,16 +29,16 @@ const Navbar = () => {
   return (
     <nav
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled ? "backdrop-blur-md shadow-lg" : ""
+        scrolled ? "backdrop-blur-md shadow-lg border border-gray-800" : ""
       }`}
       style={{
         backgroundColor: scrolled
-          ? "rgba(8, 7, 14, 0.6)" // Solid when scrolled
-          : "#0E0E12", // Transparent initially
+          ? "rgba(8, 7, 14, 0.6)" 
+          : "#0E0E12", 
       }}
     >
-      <div className="w-full max-w-7xl mx-auto text-white">
-        <div className="py-6 flex items-center justify-between px-6 md:px-0">
+      <div className="w-full max-w-[1184px] mx-auto text-white">
+        <div className="py-4 flex items-center justify-between px-6 md:px-5">
           
           {/* Logo + Desktop Menu */}
           <div className="flex gap-10 items-center">
@@ -52,7 +52,7 @@ const Navbar = () => {
             </div>
 
             {/* DESKTOP MENU LINKS */}
-            <ul className="hidden md:flex items-center gap-10 text-[16px] font-medium">
+            <ul className="hidden lg:flex items-center gap-10 text-[16px] font-medium">
               <li 
                 onClick={() => handleScrollTo("why-cryptix")} 
                
@@ -83,10 +83,10 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Button */}
-          <button className={`${buttonClass} hidden md:block`}>Use template</button>
+          <button className={`${buttonClass} hidden lg:block cursor-pointer`}>Use template</button>
 
           {/* Mobile Hamburger */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center ">
             <button onClick={() => setOpen(!open)} className="focus:outline-none text-white">
               {open ? (
                 // Close Icon (X)
@@ -105,7 +105,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {open && (
-          <ul className="md:hidden flex flex-col gap-4 px-6 pb-4 text-sm bg-[#0E0E12] border-t border-white/10">
+          <ul className="lg:hidden flex flex-col gap-4 px-6 pb-4 text-sm bg-[#0E0E12] border-t border-white/10">
             <li 
               onClick={() => handleScrollTo("why-cryptix")}
               className="cursor-pointer hover:text-[#1bf1a1] py-2 border-b border-white/5"

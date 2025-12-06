@@ -22,7 +22,7 @@ const CryptoPlatform = () => {
       id="Cryptos" 
       className="w-full  border-t border-b border-gray-800"
     >
-      <div className="max-w-7xl mx-auto border-x border-gray-800">
+      <div className="max-w-[1184px] mx-auto border-x border-gray-800">
         
         <div className="grid grid-cols-1 lg:grid-cols-12">
 
@@ -46,7 +46,7 @@ const CryptoPlatform = () => {
 
               <motion.p
                 variants={fadeUp(0.35)}
-                className="text-md text-gray-400 leading-relaxed max-w-md"
+                className="text-md text-gray-200 leading-relaxed max-w-md"
               >
                 Buy, sell, and convert all major cryptocurrencies on a single platform. 
                 A smooth experience with no compromises.
