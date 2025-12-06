@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { ArrowUpRight, Plus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -40,14 +40,32 @@ const faqs = [
     answer: "Our support team is available 24/7 via live chat and email. Premium members also get access to a dedicated phone line for urgent queries."
   },
   {
-    id:8,
+    id: 8,
     question: "How can I contact support?",
     answer: "Our support team is available 24/7 via live chat and email. Premium members also get access to a dedicated phone line for urgent queries."
   }
 ];
 
+// Hook for fade + slide in
+const useInView = () => {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => entry.isIntersecting && setVisible(true),
+      { threshold: 0.25 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return [ref, visible];
+};
+
 const FAQ = () => {
   const [openId, setOpenId] = useState(null);
+  const [headerRef, headerVisible] = useInView();
 
   const toggleFAQ = (id) => {
     setOpenId(openId === id ? null : id);
@@ -57,11 +75,16 @@ const FAQ = () => {
   const rightFaqs = faqs.slice(4, 8);
 
   return (
-    <section className="text-white border-t border-b border-gray-800 ">
+    <section className="text-white border-t border-b border-gray-800 " id='FAQ'>
 
       {/* Header */}
       <div className="border-b border-gray-800">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-end border-l border-r border-gray-800">
+        <div
+          ref={headerRef}
+          className={`max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-end border-l border-r border-gray-800 transition-all duration-700 ease-out
+            ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
+          `}
+        >
 
           {/* Left side */}
           <div className="border-r border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
@@ -77,7 +100,7 @@ const FAQ = () => {
 
             <a
               href="#"
-              className="hidden md:flex gap-2 justify-end items-center p-5 text-green-400 hover:text-green-300 font-medium whitespace-nowrap w-full"
+              className="hidden md:flex gap-2 justify-end items-center p-5 text-green-400 hover:text-green-300 font-medium whitespace-nowrap w-full transition-all duration-700 ease-out"
             >
               Create account now
               <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -107,12 +130,10 @@ const FAQ = () => {
 // Single FAQ Item with Unified Hover Effect
 const FAQItem = ({ faq, isOpen, toggle }) => {
   return (
-    // CHANGE 1: 'group' এবং 'hover:bg-white/[0.02]' এখানে প্যারেন্ট ডিভে আনা হয়েছে
     <div className="border-b border-gray-800 last:border-b-0 md:last:border-b-0 group hover:bg-white/[0.02] transition-colors duration-300">
       
       <button 
         onClick={toggle} 
-        // CHANGE 2: বাটন থেকে hover ব্যাকগ্রাউন্ড সরিয়ে নেওয়া হয়েছে
         className="w-full text-left p-6 md:p-8 flex items-start justify-between transition-colors"
       >
         <span className={`text-lg font-medium pr-8 transition-colors ${isOpen ? 'text-white' : 'text-gray-300 group-hover:text-white'}`}>
@@ -141,7 +162,6 @@ const FAQItem = ({ faq, isOpen, toggle }) => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            {/* প্যারাগ্রাফের ব্যাকগ্রাউন্ড ট্রান্সপারেন্ট, তাই প্যারেন্টের hover কালার দেখা যাবে */}
             <p className="px-6 md:px-8 pb-8 text-gray-400 leading-relaxed">
               {faq.answer}
             </p>
