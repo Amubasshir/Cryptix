@@ -125,7 +125,7 @@ const CTASection = () => {
           </div>
         </div>
 
-        {/* ======================= 
+        {/* =======================  
              4. BOTTOM LASER LINE 
            ======================= */}
         <div className="absolute bottom-0 left-0 w-full flex justify-center z-20">

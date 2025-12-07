@@ -27,7 +27,7 @@ const HowItWorksSection = () => {
   const [headerRef, headerVisible] = useInView();
 
   return (
-    <section className="bg-[#050505] text-white border-t border-b border-gray-800" id='how-it-works'>
+    <section className=" text-white border-t border-b border-gray-800" id='how-it-works'>
 
       {/* Header Section */}
         <div className="border-b border-gray-800">

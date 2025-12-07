@@ -126,22 +126,36 @@ const HeroSection = () => {
           </p>
 
           <div className="flex items-center px-5 py-2 gap-2">
-            <div className="flex gap-1 text-white">
-              {[...Array(5)].map((_, i) =>
-                i === 4 ? (
-                  /* Half star */
-                  <svg key={i} width="16" height="16" viewBox="0 0 24 24">
-                    <path d="M12 2l-3.09 6.26L2 9.27l5 4.87L5.82 21l6.18-3.23 6.18 3.23L17 14.14l5-4.87-6.91-1.01L12 2z" fill="none" stroke="currentColor" strokeWidth="1" />
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77V2z" fill="currentColor" />
-                  </svg>
-                ) : (
-                  /* Full star */
-                  <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                )
-              )}
-            </div>
+           <div className="flex gap-1 text-white">
+  {[...Array(5)].map((_, i) =>
+    i === 4 ? (
+      /* Half Star (4.5 Rating Style) */
+      <svg key={i} width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        {/* 1. পুরো স্টারের আউটলাইন (Outline) */}
+        <path 
+          d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="2" 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+        />
+        
+        {/* 2. শুধু বাম পাশ ভরাট করা (Left Half Fill) */}
+        <path 
+          d="M12 2 L 8.91 8.26 L 2 9.27 L 7 14.14 L 5.82 21 L 12 17.77 V 2 Z" 
+          fill="currentColor" 
+          stroke="none" 
+        />
+      </svg>
+    ) : (
+      /* Full Star */
+      <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+      </svg>
+    )
+  )}
+</div>
 
             <div className="flex items-center gap-2">
               <span className="text-white text-sm font-bold">4.9</span>
