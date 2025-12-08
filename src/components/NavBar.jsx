@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 bg-transparent ${
+      className={`fixed dm-sans top-0 left-0 z-50 w-full transition-all duration-300 bg-transparent ${
         scrolled
           ? "backdrop-blur-md border-b border-white/10 shadow-lg"
           : ""
@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="py-6 flex items-center justify-between px-6 md:px-5 lg:px-0">
           
           {/* Logo + Desktop Menu */}
-          <div className="flex gap-8 items-center font-[dm-sans3]">
+          <div className="flex gap-8 items-center dm-sans">
             <div
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => window.scrollTo(0, 0)}
@@ -328,7 +328,7 @@ const HeroContent = () => {
           animate={isInView ? "visible" : "hidden"}
           className="mt-12 flex flex-col items-center gap-3"
         >
-          <p className="text-[10px] md:text-[14px] font-extralight font-[dm-sans3] text-white dm-sans">
+          <p className="text-[10px] md:text-[14px] font-light  text-white dm-sans">
             They trust us
           </p>
 

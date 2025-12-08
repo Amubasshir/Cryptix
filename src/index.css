@@ -1,92 +1,12 @@
+
 @import "tailwindcss";
 
-@font-face {
-  font-family:dm-sans ;
-  src: url(./DMSans_18pt-Medium.ttf);
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import "tailwindcss";
+
+/* 2. The Class Definition */
+.dm-sans {
+  font-family: "DM Sans", "DM Sans Placeholder", sans-serif;
+  font-optical-sizing: auto;
 }
-@font-face {
-  font-family:dm-sans2 ;
-  src: url(./DMSans_18pt-Bold.ttf);
-}
-@font-face {
-  font-family:dm-sans3 ;
-  src: url(./DMSans_18pt-Light.ttf);
-}
-
-/* .dm-sans{
-  font-family: "DM Sans", sans-serif;
-} */
-      
-            .framer-OoL9O .framer-1o54d2s {
-                flex-flow: column;
-                flex: none;
-                place-content: center;
-                align-items: center;
-                gap: 96px;
-                width: 100%;
-                height: min-content;
-                padding: 192px 0 48px;
-                display: flex;
-                position: relative;
-                overflow: visible
-            }
-
-            .framer-OoL9O .framer-nvk4t0 {
-                filter: blur(90px);
-                aspect-ratio: 1;
-                height: var(--framer-aspect-ratio-supported,930px);
-                opacity: .01;
-                z-index: 0;
-                background-color: #fff;
-                border-radius: 100%;
-                flex: none;
-                width: 930px;
-                position: absolute;
-                top: -490px;
-                left: -395px
-            }
-
-            .framer-OoL9O .framer-2ta629 {
-                filter: blur(90px);
-                aspect-ratio: 1;
-                height: var(--framer-aspect-ratio-supported,694px);
-                opacity: .05;
-                z-index: 0;
-                background-color: #abffe6;
-                border-radius: 100%;
-                flex: none;
-                width: 694px;
-                position: absolute;
-                top: -362px;
-                left: -347px
-            }
-
-            .framer-OoL9O .framer-j8zcxt {
-                filter: blur(90px);
-                aspect-ratio: 1;
-                height: var(--framer-aspect-ratio-supported,930px);
-                opacity: .01;
-                z-index: 0;
-                background-color: #fff;
-                border-radius: 100%;
-                flex: none;
-                width: 930px;
-                position: absolute;
-                top: -21px;
-                right: -622px
-            }
-
-            .framer-OoL9O .framer-nqgczc {
-                filter: blur(90px);
-                aspect-ratio: 1;
-                height: var(--framer-aspect-ratio-supported,694px);
-                opacity: .05;
-                z-index: 0;
-                background-color: #abffe6;
-                border-radius: 100%;
-                flex: none;
-                width: 694px;
-                position: absolute;
-                top: 97px;
-                right: -504px
-            }
