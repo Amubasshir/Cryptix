@@ -24,14 +24,14 @@ const FeatureCard = ({ icon: Icon, title, description, delay, className }) => (
     viewport={{ once: true, margin: "-50px" }}
     // Responsive Padding: p-6 on mobile, p-8 on desktop
     // Responsive Borders: Handled via className prop passed from parent
-    className={`flex flex-col items-start p-6 md:p-8 transition-colors duration-300 h-full group border-gray-800 ${className}`}
+    className={`flex flex-col items-start p-3 md:p-5 transition-colors duration-300 h-full group border-gray-800 ${className}`}
   >
     {/* Icon Container */}
-    <div className="w-16 h-16 mb-6 md:mb-8 rounded-full border border-gray-800 flex items-center justify-center transition-colors shadow-[inset_0_0_20px_rgba(255,255,255,0.05)] group-hover:border-white/20 group-hover:bg-white/[0.02]">
-      <Icon strokeWidth={1.5} className="w-8 h-8 text-white" />
+    <div className="w-16 h-16 mb-4 md:mb-6 rounded-full border border-gray-800 flex items-center justify-center transition-colors shadow-[inset_0_0_10px_rgba(255,255,255,0.05)]  bg-white/[0.01]">
+      <Icon strokeWidth={1.5} className="w-6 h-6 text-white" />
     </div>
     
-    <h3 className="text-sm font-bold tracking-[0.08em] mb-3 md:mb-4 text-white uppercase">
+    <h3 className="text-sm font-medium tracking-[0.08em] mb-2 md:mb-3 text-white uppercase">
       {title}
     </h3>
     <p className="text-sm md:text-base font-medium text-gray-400 leading-relaxed max-w-xs">

@@ -5,7 +5,7 @@ import App from './App.jsx'
 import Navbar from './components/NavBar.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <div className='bg-[#050505] dm-sans' >
+  <div className='bg-[#050505] font-[dm-sans]' >
     <StrictMode>
        <Navbar></Navbar> 
     <App />

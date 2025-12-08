@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
-
-
-
-@layer base {
-  html {
-    font-family: "DM Sans", sans-serif;
-  }
+@font-face {
+  font-family:dm-sans ;
+  src: url(./DMSans_18pt-Medium.ttf);
 }
-.dm-sans{
+@font-face {
+  font-family:dm-sans2 ;
+  src: url(./DMSans_18pt-Bold.ttf);
+}
+@font-face {
+  font-family:dm-sans3 ;
+  src: url(./DMSans_18pt-Light.ttf);
+}
+
+/* .dm-sans{
   font-family: "DM Sans", sans-serif;
-}
+} */

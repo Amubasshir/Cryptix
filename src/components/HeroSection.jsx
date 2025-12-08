@@ -19,34 +19,24 @@ const blurFadeUp = (delay = 0) => ({
 });
 
 // --- NEW ANIMATION VARIANTS FOR BOTTOM TEXT ---
-
-// 1. Container: Controls the speed of the stagger
 const textContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.08, // Time between each word appearing
-      delayChildren: 0.9,    // Wait for the dashboard to finish animating
+      staggerChildren: 0.08,
+      delayChildren: 0.9,
     },
   },
 };
 
-// 2. Child: The actual blur/fade effect for each word
 const wordVariant = {
-  hidden: { 
-    opacity: 0, 
-    filter: "blur(10px)", 
-    y: 20 
-  },
+  hidden: { opacity: 0, filter: "blur(10px)", y: 20 },
   visible: {
     opacity: 1,
     filter: "blur(0px)",
     y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut"
-    }
+    transition: { duration: 0.5, ease: "easeOut" }
   },
 };
 
@@ -54,7 +44,6 @@ const HeroSection = () => {
   const heroRef = useRef(null);
   const isInView = useInView(heroRef, { once: true, margin: "-50px" });
 
-  // Helper to split text into animated words
   const renderWords = (text, className = "") => {
     return text.split(" ").map((word, i) => (
       <motion.span 
@@ -70,7 +59,7 @@ const HeroSection = () => {
   return (
     <section
       ref={heroRef}
-      className="w-full min-h-screen text-white pt-32 pb-20 overflow-hidden relative selection:bg-[#1bf1a1] selection:text-black"
+      className="w-full min-h-screen text-white pt-32 pb-20 overflow-hidden relative selection:bg-[#1bf1a1] selection:text-black dm-sans bg-[#050505]"
     >
       {/* 1. Ambient Background Glow */}
       <div className="absolute -top-80 -left-70 w-[600px] h-[600px] bg-[#3f3f3f] opacity-10 blur-[150px] rounded-full pointer-events-none"></div>
@@ -83,10 +72,10 @@ const HeroSection = () => {
           variants={blurFadeUp(0.1)}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="text-5xl md:text-7xl lg:text-[84px] font-medium leading-[1.05] tracking-tight text-white"
+          className="text-5xl md:text-7xl lg:text-[82px] font-medium leading-[1.05] tracking-tight text-white dm-sans"
         >
           Take Control of
-          <span className="block text-white/90">Your Digital Assets</span>
+          <span className="block text-white/90 ">Your Digital Assets</span>
         </motion.h1>
 
         {/* 3. Subtext */}
@@ -94,7 +83,7 @@ const HeroSection = () => {
           variants={blurFadeUp(0.25)}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="text-zinc-400 mt-8 max-w-[46rem] mx-auto text-lg md:text-xl leading-relaxed font-light"
+          className="text-zinc-400 mt-4 max-w-[42rem] mx-auto text-[18px] font-light"
         >
           Cryptix offers a seamless, secure experience for managing your digital assets.
           Instant transactions, optimized fees, and premium design.
@@ -105,12 +94,11 @@ const HeroSection = () => {
           variants={blurFadeUp(0.4)}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="mt-10"
+          className="mt-6"
         >
-          <button className="group relative inline-flex items-center gap-2 px-6 py-3 bg-[#1BF1A1] text-black font-medium  rounded-full transition-all duration-300 hover:scale-3d hover:shadow-[0_0_0px_6px_#00ffb27a] cursor-pointer">
+          <button className="group relative inline-flex items-center gap-2 px-6 py-3 bg-[#1BF1A1] text-black font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(27,241,161,0.4)] cursor-pointer">
             <span className="relative z-10">Get started now</span>
             <ArrowUpRight className="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-            {/* <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div> */}
           </button>
         </motion.div>
 
@@ -121,41 +109,25 @@ const HeroSection = () => {
           animate={isInView ? "visible" : "hidden"}
           className="mt-12 flex flex-col items-center gap-3"
         >
-          <p className="text-[10px] md:text-xs font-medium uppercase text-white dm-sans">
+          <p className="text-[10px] md:text-[14px] font-extralight font-[dm-sans3] text-white dm-sans">
             They trust us
           </p>
 
-          <div className="flex items-center px-5 py-2 gap-2">
+          <div className="flex items-center px-5 gap-2">
            <div className="flex gap-1 text-white">
-  {[...Array(5)].map((_, i) =>
-    i === 4 ? (
-      /* Half Star (4.5 Rating Style) */
-      <svg key={i} width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        {/* 1. পুরো স্টারের আউটলাইন (Outline) */}
-        <path 
-          d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" 
-          fill="none" 
-          stroke="currentColor" 
-          strokeWidth="2" 
-          strokeLinecap="round" 
-          strokeLinejoin="round" 
-        />
-        
-        {/* 2. শুধু বাম পাশ ভরাট করা (Left Half Fill) */}
-        <path 
-          d="M12 2 L 8.91 8.26 L 2 9.27 L 7 14.14 L 5.82 21 L 12 17.77 V 2 Z" 
-          fill="currentColor" 
-          stroke="none" 
-        />
-      </svg>
-    ) : (
-      /* Full Star */
-      <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-      </svg>
-    )
-  )}
-</div>
+            {[...Array(5)].map((_, i) =>
+                i === 4 ? (
+                <svg key={i} width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M12 2 L 8.91 8.26 L 2 9.27 L 7 14.14 L 5.82 21 L 12 17.77 V 2 Z" fill="currentColor" stroke="none" />
+                </svg>
+                ) : (
+                <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                )
+            )}
+            </div>
 
             <div className="flex items-center gap-2">
               <span className="text-white text-sm font-bold">4.9</span>
@@ -170,7 +142,7 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* 6. Dashboard Preview */}
+{/* 6. Dashboard Preview (UPDATED: Animation Added & Exact Glow) */}
       <motion.div
         variants={blurFadeUp(0.7)}
         initial="hidden"
@@ -178,35 +150,58 @@ const HeroSection = () => {
         className="mt-24 flex justify-center px-4 relative z-10"
       >
         <div className="relative max-w-[1184px] w-full">
-          {/* Background Haze */}
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3/4 h-30 bg-[#1BF1A1] opacity-30 blur-[80px] rounded-full pointer-events-none"></div>
+          
+          {/* ---- GLOWING HORIZON EFFECT ---- */}
+          <div className="absolute -top-[1px] left-0 w-full flex justify-center items-center z-50">
+             
+             {/* 1. Ambient Green Glow (Background Haze) */}
+             <div className="absolute -top-[23px] w-[80%] h-[50px] bg-[#00fd9f] blur-[55px] opacity-30"></div>
+
+             {/* 2. Intense White/Green Core (Center Brightness) */}
+            <div className="absolute  w-[70%] h-10px] bg-[#1BF1A1] blur-[90px] opacity-60 "></div>
+
+            <div className="absolute  w-[45%] h-[5px] bg-[#1BF1A1] blur-[45px] opacity-54 "></div>
+            
+            <div className="absolute  w-[30%] h-[3px] bg-white blur-[50px] opacity-80 "></div>
+            
+             <div className="absolute  w-[50%] h-[4px] bg-white blur-[20px] opacity-100 "></div>
+             
+             {/* 3. The Sharp White Laser Line (Border) */}
+             <div className="relative w-[60%] h-[2px] bg-gradient-to-r from-transparent via-white via-70% to-transparent opacity-100 shadow-[0_0_15px_rgba(255,255,255,0.9)]"></div>
+
+          </div>
+          {/* ---- END GLOW EFFECT ---- */}
 
           {/* Card Container */}
-          <div className="relative rounded-xl border border-white/5  shadow-2xl overflow-hidden">
-            {/* Top Scanner Line */}
-            <div className="absolute -top-1 left-0 right-0 mx-auto w-[70%] h-[7px] bg-gradient-to-r from-transparent via-[#feffff] to-transparent opacity-100 z-20 shadow-[0_0_60px_#afedd6]"></div>
-            <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-[#1BF1A1] opacity-30 blur-[80px] rounded-full pointer-events-none z-40"></div>
-
-            {/* Moving Scanner Beam */}
+          <div className="relative rounded-2xl border border-white/10 bg-[#050505] shadow-2xl overflow-hidden">
+            
+            {/* --- ADDED ANIMATION (Scanner Beam) --- */}
             <motion.div
-              className="absolute top-0 h-[1px] w-[50px] z-30 bg-gradient-to-r from-transparent via-white to-transparent"
-              style={{ boxShadow: `0 0 0 1px ${ACCENT_GREEN}`, filter: "blur(0.5px)" }}
-              initial={{ left: "-200px", opacity: 0 }}
+              className="absolute top-0 h-[1px] w-[50px] z-40 bg-gradient-to-r from-transparent via-white to-transparent opacity-100"
+              initial={{ left: "-20%", opacity: 0 }}
               animate={{ left: "120%", opacity: [0, 1, 1, 0] }}
-              transition={{ duration: 4, ease: "easeInOut", repeat: Infinity, repeatDelay: 1 }}
+              transition={{ 
+                duration: 4, 
+                ease: "easeInOut", 
+                repeat: Infinity, 
+                repeatDelay: 2 
+              }}
+              style={{ boxShadow: "0 0 20px 2px rgba(255, 255, 255, 0.7)" }}
             />
+            
+            {/* Subtle Top Border Line */}
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
             {/* Image */}
             <img
               src="https://framerusercontent.com/images/6AfF1TCZ0fgDvIyRPSrmwJXP9Hc.png?width=2880&height=1770"
               alt="Dashboard preview"
-              className="relative z-10 w-full h-auto opacity-90 transition-opacity duration-500 block"
+              className="relative z-10 w-full h-auto opacity-100 block"
             />
           </div>
         </div>
       </motion.div>
-
-      {/* 7. Bottom Statement Text (UPDATED WITH WORD-BY-WORD ANIMATION) */}
+      {/* 7. Bottom Statement Text */}
       <motion.div
         variants={textContainer}
         initial="hidden"
@@ -214,15 +209,10 @@ const HeroSection = () => {
         className="max-w-4xl mx-auto px-6 text-center mt-28 relative z-10"
       >
         <p className="text-zinc-300 text-2xl md:text-3xl lg:text-4xl font-normal leading-snug">
-          {/* Line 1 */}
           {renderWords("Simplicity, performance, and security,")}
           <br className="hidden md:block" />
-          
-          {/* Line 2 */}
           {renderWords("empowering you to navigate the digital world")}
           <br className="hidden md:block" />
-          
-          {/* Line 3 (Bold) */}
           <span className="text-white font-medium">
             {renderWords("with confidence and agility.")}
           </span>
