@@ -82,7 +82,7 @@ const CTASection = () => {
             ></motion.div>
 
             {/* 2. Text Content */}
-            <div className="relative z-10 max-w-3xl mx-auto space-y-8">
+            <div className="relative z-10 max-w-3xl mx-auto space-y-4">
               
               {/* Heading Animation */}
               <motion.h2 
@@ -113,7 +113,7 @@ const CTASection = () => {
                 animate={isInView ? "visible" : "hidden"}
                 className="pt-4"
               >
-                <button className="group relative inline-flex items-center gap-2 px-6 py-3 bg-[#1BF1A1] text-black font-medium  rounded-full transition-all duration-300 hover:scale-3d hover:shadow-[0_0_0px_6px_#00ffb27a] cursor-pointer">
+                <button className="group relative inline-flex items-center gap-2 px-4 py-3 bg-[#00ffb2] text-black font-medium  rounded-full transition-all duration-300 hover:scale-3d hover:shadow-[0_0_0px_6px_#00ffb27a] cursor-pointer">
                            <span className="relative z-10">Get started now</span>
                            <ArrowUpRight className="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                           
@@ -134,7 +134,7 @@ const CTASection = () => {
                variants={lineVariant(0.5)}
                initial="hidden"
                animate={isInView ? "visible" : "hidden"}
-               className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#1bf1a1] to-transparent opacity-50 origin-center"
+               className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#00ffb2] to-transparent opacity-50 origin-center"
             ></motion.div>
             
             {/* Glow Effect */}
@@ -142,7 +142,7 @@ const CTASection = () => {
                initial={{ opacity: 0 }}
                animate={isInView ? { opacity: 0.2 } : { opacity: 0 }}
                transition={{ duration: 1.5, delay: 0.7 }}
-               className="absolute bottom-0 w-1/2 h-[50px] bg-[#1bf1a1] blur-[60px]"
+               className="absolute bottom-0 w-1/2 h-[50px] bg-[#00ffb2] blur-[60px]"
             ></motion.div>
         </div>
 

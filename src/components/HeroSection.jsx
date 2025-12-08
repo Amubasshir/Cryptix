@@ -59,7 +59,7 @@ const HeroSection = () => {
   return (
     <section
       ref={heroRef}
-      className="w-full min-h-screen text-white pt-32 pb-20 overflow-hidden relative selection:bg-[#1bf1a1] selection:text-black dm-sans bg-[#050505]"
+      className="w-full min-h-screen text-white pt-28 pb-20 overflow-hidden relative selection:bg-[#1bf1a1] selection:text-black dm-sans bg-[#050505]"
     >
       {/* 1. Ambient Background Glow */}
       <div className="absolute -top-80 -left-70 w-[600px] h-[600px] bg-[#3f3f3f] opacity-60 blur-[150px] rounded-full pointer-events-none"></div>
@@ -96,7 +96,7 @@ const HeroSection = () => {
           animate={isInView ? "visible" : "hidden"}
           className="mt-6"
         >
-          <button className="group relative inline-flex items-center gap-2 px-6 py-3 bg-[#1BF1A1] text-black font-medium rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(27,241,161,0.4)] cursor-pointer">
+          <button className="group relative inline-flex items-center gap-2 px-4 py-3 bg-[#00ffb2] text-black font-medium rounded-full transition-all duration-300 hover:scale-3d hover:shadow-[0px_0px_0px_5px_#00ffb27a] cursor-pointer">
             <span className="relative z-10">Get started now</span>
             <ArrowUpRight className="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </button>
@@ -155,14 +155,14 @@ const HeroSection = () => {
           <div className="absolute -top-[1px] left-0 w-full flex justify-center items-center z-50">
              
              {/* 1. Ambient Green Glow (Background Haze) */}
-            <div className="absolute -top-[23px] w-[80%] h-[50px] bg-[#00fd9f] blur-[55px] opacity-30"></div>
+            <div className="absolute -top-[23px] w-[80%] h-[50px] bg-[#00ffb2] blur-[55px] opacity-25"></div>
             
-             <div className="absolute -top-[23px] w-[65%] h-[18px] bg-[#00fd9f] blur-[40px] opacity-30"></div>
+             <div className="absolute -top-[23px] w-[65%] h-[18px] bg-[#00ffb2] blur-[40px] opacity-30"></div>
 
              {/* 2. Intense White/Green Core (Center Brightness) */}
             {/* <div className="absolute  w-[70%] h-10px] bg-[#1BF1A1] blur-[90px] opacity-60 "></div> */}
 
-            <div className="absolute  w-[45%] h-[5px] bg-[#1BF1A1] blur-[45px] opacity-54 "></div>
+            <div className="absolute  w-[45%] h-[5px] bg-[#00ffb2] blur-[45px] opacity-54 "></div>
             
             <div className="absolute  w-[30%] h-[10px] bg-white blur-[50px] opacity-80 "></div>
 

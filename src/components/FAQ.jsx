@@ -89,11 +89,11 @@ const FAQ = () => {
           {/* Left side */}
           <div className="border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
             {/* UPDATED: Responsive Text Sizes */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-4 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-medium mb-4 tracking-tight">
               Your Questions, Answered
             </h2>
             {/* UPDATED: Responsive Text Sizes */}
-            <p className="text-white text-sm md:text-base lg:text-lg leading-relaxed text-gray-400">
+            <p className="text-white text-sm md:text-base lg:text-md leading-relaxed text-gray-400">
               Find everything you need to know about Cryptix, from security to supported assets.
             </p>
           </div>
@@ -104,7 +104,7 @@ const FAQ = () => {
 
             <a
               href="#"
-              className="hidden md:flex gap-2 justify-end items-center p-5 text-green-400 hover:text-green-300 font-medium whitespace-nowrap w-full transition-all duration-700 ease-out hover:bg-[rgb(51 195 69 / 5%)]"
+              className="hidden md:flex gap-2 justify-end items-center p-5 text-[#00ffb2]  font-medium whitespace-nowrap w-full transition-all duration-700 ease-out hover:bg-green-400/5"
             >
               Create account now
               <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />

@@ -36,7 +36,7 @@ const CryptoPlatform = () => {
             className="lg:col-span-6 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-gray-800 "
           >
             {/* Text Content */}
-            <div className="p-8  mb-10">
+            <div className="p-6  mb-8">
               <motion.h2
                 variants={fadeUp(0.2)}
                 className="text-3xl md:text-4xl font-medium mb-6 text-white"
@@ -46,7 +46,7 @@ const CryptoPlatform = () => {
 
               <motion.p
                 variants={fadeUp(0.35)}
-                className="text-md text-gray-200 leading-relaxed max-w-md"
+                className="text-md text-gray-200 leading-relaxed w-full"
               >
                 Buy, sell, and convert all major cryptocurrencies on a single platform. 
                 A smooth experience with no compromises.
@@ -59,7 +59,7 @@ const CryptoPlatform = () => {
             >
               <a
                 href="#"
-                className="flex items-center gap-3 p-5 border-t border-gray-800 text-[#1bf1a1] font-semibold group hover:bg-white/[0.02] transition-colors duration-300 "
+                className="flex items-center gap-3 p-5 border-t border-gray-800 text-[#00ffb2] font-medium group hover:bg-green-400/5 transition-colors duration-300 "
               >
                 <span>Buy crypto now</span>
                 <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />

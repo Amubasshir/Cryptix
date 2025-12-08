@@ -21,7 +21,7 @@ function App() {
       <div className=''>
        
         <HeroSection></HeroSection>
-       <WhyCryptix></WhyCryptix>
+        <WhyCryptix></WhyCryptix>
         <Sectiongap></Sectiongap>
         <CryptoPlatform></CryptoPlatform>
         <Sectiongap></Sectiongap>
