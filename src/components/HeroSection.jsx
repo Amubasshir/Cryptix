@@ -62,9 +62,19 @@ const HeroSection = () => {
       className="w-full min-h-screen text-white pt-28 pb-20 overflow-hidden relative selection:bg-[#1bf1a1] selection:text-black dm-sans bg-[#050505]"
     >
       {/* 1. Ambient Background Glow */}
-      <div className="absolute -top-80 -left-70 w-[600px] h-[600px] bg-[#3f3f3f] opacity-60 blur-[150px] rounded-full pointer-events-none"></div>
-      <div className="absolute top-30 -right-50 w-[400px] h-[400px] bg-[#3f3f3f] opacity-60 blur-[150px] rounded-full pointer-events-none"></div>
+       {/* <div className="absolute -top-80 -left-70 w-[600px] h-[600px] bg-[#cbcbcb] opacity-4 blur-[90px] rounded-full pointer-events-none"></div> */}
 
+{/*
+      <div className="absolute -top-12 -right-112 w-[694px] h-[694px] bg-[#abffe6] opacity-5 blur-[90px] rounded-full  aspect-square"></div> */}
+{/* 
+      <div className="absolute -top-12 -right-112 w-[600px] h-[600px] bg-[#abffe6] opacity-5 blur-[90px] rounded-full  aspect-square"></div> */}
+
+      {/* <div className="framer-nvk4t0"></div>
+      <div className="framer-2ta629"></div> */}
+      <div className="framer-j8zcxt"></div>
+      <div className="framer-nqgczc"></div>
+      {/* Optional: Subtle Grid Pattern for texture */}
+      
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
         
         {/* 2. Main Title */}
