@@ -81,11 +81,11 @@ const Navbar = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span className="text-2xl font-medium tracking-tight">Cryptix</span>
+              <span className="text-2xl font-medium tracking-wider">Cryptix</span>
             </div>
 
             {/* DESKTOP MENU LINKS */}
-            <ul className="hidden lg:flex items-center gap-7 text-[16px] font-medium text-gray-300">
+            <ul className="hidden lg:flex items-center gap-8 text-[16px] font-medium text-gray-300">
               <li
                 onClick={() => handleScrollTo("why-cryptix")}
                 className="cursor-pointer hover:text-[#1bf1a1] transition-colors"
@@ -271,7 +271,7 @@ const HeroContent = () => {
   return (
     <section
       ref={heroRef}
-      className="w-full min-h-screen text-white pt-52 pb-20 overflow-hidden relative selection:bg-[#1bf1a1] selection:text-black dm-sans bg-[#050505]"
+      className="w-full min-h-screen text-white pt-50 pb-20 overflow-hidden relative selection:bg-[#1bf1a1] selection:text-black dm-sans bg-[#050505]"
     >
            <div className="absolute -top-[490px] -left-[395px] w-[930px] h-[930px] bg-[#608cf2] opacity-[0.04] blur-[120px] rounded-full pointer-events-none"></div>
       <div className="absolute -top-[362px] -left-[347px] w-[694px] h-[694px] bg-[#71abf3] opacity-[0.07] blur-[120px] rounded-full pointer-events-none"></div>
@@ -279,10 +279,10 @@ const HeroContent = () => {
  
       
      
-<div className="absolute -top-[9px] -right-[445px] w-[930px] h-[930px] bg-[#71abf3] opacity-[0.06] blur-[90px] rounded-full aspect-square z-0 pointer-events-none"></div>
+<div className="absolute -top-[9px] -right-[445px] w-[930px] h-[930px] bg-[#71abf3] opacity-[0.06] blur-[100px] rounded-full aspect-square z-0 pointer-events-none"></div>
 
 {/* 2. framer-nqgczc (Teal Glow) */}
-<div className="absolute top-[60px] -right-[504px] w-[694px] h-[694px] bg-[#608cf2] opacity-[0.05] blur-[90px] rounded-full aspect-square z-0 pointer-events-none"></div>
+<div className="absolute top-[60px] -right-[504px] w-[694px] h-[694px] bg-[#727e9b] opacity-[0.05] blur-[100px] rounded-full aspect-square z-0 pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
         
@@ -291,7 +291,7 @@ const HeroContent = () => {
           variants={blurFadeUp(0.1)}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="text-5xl md:text-7xl lg:text-[82px] font-medium leading-[1.05] tracking-tight text-white dm-sans"
+          className="text-5xl md:text-7xl lg:text-[82px] font-medium leading-[1.05] tracking-wide text-white dm-sans"
         >
           Take Control of
           <span className="block text-white/90 ">Your Digital Assets</span>
