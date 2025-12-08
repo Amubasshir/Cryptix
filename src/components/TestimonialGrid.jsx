@@ -106,7 +106,10 @@ const TestimonialGrid = () => {
           
           {/* Left: Active Testimonial Card */}
           <div className="lg:col-span-2 p-8 md:p-12  lg:border-r border-white/10 relative  overflow-hidden">
-               <div className="absolute -top-60 -left-50 w-[600px] h-[600px] bg-[#3f3f3f] opacity-10 blur-[150px] rounded-full pointer-events-none"></div>
+                 <div className="absolute -top-[490px] -left-[395px] w-[930px] h-[930px] bg-[#fff] opacity-[0.01] blur-[120px] rounded-full pointer-events-none"></div>
+      
+      <div className="absolute -top-[362px] -left-[347px] w-[694px] h-[694px] bg-[#6d6d6d] opacity-[0.05] blur-[120px] rounded-full pointer-events-none"></div>
+
             <AnimatePresence mode='wait'>
               <motion.div 
                 key={currentIndex}

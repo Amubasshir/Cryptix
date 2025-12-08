@@ -41,7 +41,7 @@ const HowItWorksSection = () => {
                {/* Left side */}
                <div className="border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
                  {/* UPDATED: Responsive Text Sizes */}
-                 <h2 className="text-3xl md:text-4xl  font-medium mb-4 tracking-tight">
+                 <h2 className="text-3xl md:text-[40px]  font-normal mb-4 ">
                    How It Works
                  </h2>
                  {/* UPDATED: Responsive Text Sizes */}
@@ -105,7 +105,7 @@ const StepCard = ({ number, title, description, image, delay }) => {
     <div className="relative group">
 
       {/* Image Area */}
-      <div className="relative mb-6 overflow-hidden bg-[#080808]">
+      <div className="relative mb-6 overflow-hidden bg-[#141319]">
         {/* Image with Scale on Hover */}
         <img
           src={image}

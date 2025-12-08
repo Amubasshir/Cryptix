@@ -113,7 +113,7 @@ const CTASection = () => {
                 animate={isInView ? "visible" : "hidden"}
                 className="pt-4"
               >
-                <button className="group relative inline-flex items-center gap-2 px-4 py-3 bg-[#00ffb2] text-black font-medium  rounded-full transition-all duration-300 hover:scale-3d hover:shadow-[0_0_0px_6px_#00ffb27a] cursor-pointer">
+                <button className="group relative inline-flex items-center gap-2 px-4 py-3 bg-[#00ffb2] text-black font-medium  rounded-full transition-all duration-300 hover:scale-3d hover:shadow-[0_0_0px_7px_#00ffb21f] cursor-pointer">
                            <span className="relative z-10">Get started now</span>
                            <ArrowUpRight className="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                           

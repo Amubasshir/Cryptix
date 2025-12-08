@@ -51,7 +51,7 @@ const WhyCryptix = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-3xl md:text-4xl font-light mb-4 md:mb-6 tracking-tight"
+          className="text-3xl md:text-[40px] font-normal mb-4 tracking-tight"
         >
           Why Choose Cryptix?
         </motion.h2>
@@ -61,7 +61,7 @@ const WhyCryptix = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-base md:text-md text-gray-400 max-w-2xl mx-auto font-light leading-relaxed"
+          className="text-base md:text-[16px] text-gray-300 max-w-2xl mx-auto font-medium leading-relaxed"
         >
           Benefits designed to provide a seamless, secure, and accessible experience for all users.
         </motion.p>

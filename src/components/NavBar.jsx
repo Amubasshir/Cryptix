@@ -22,7 +22,7 @@ const Navbar = () => {
   // Tailwind classes for hover + background
   const buttonClass = `px-4 py-2 rounded-full transition-colors duration-300 cursor-pointer font-medium ${
     scrolled
-      ? "bg-[#00ffb2] text-black hover:shadow-[0px_0px_0px_5px_#00ffb27a]"
+      ? "bg-[#00ffb2] text-black hover:shadow-[0px_0px_0px_7px_#00ffb21f]"
       : "bg-white/10 hover:bg-white/20 text-white"
   }`;
 
@@ -52,40 +52,12 @@ const Navbar = () => {
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => window.scrollTo(0, 0)}
             >
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 17L12 22L22 17"
-                  stroke="#1bf1a1"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M2 12L12 17L22 12"
-                  stroke="#1bf1a1"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M12 2L2 7L12 12L22 7L12 2Z"
-                  stroke="#1bf1a1"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <span className="text-2xl font-medium tracking-wider">Cryptix</span>
+             <img src="https://framerusercontent.com/images/4ApMrTB8uizXZ8qPNGF601tK8.svg" alt="" />
+            
             </div>
 
             {/* DESKTOP MENU LINKS */}
-            <ul className="hidden lg:flex items-center gap-8 text-[16px] font-medium text-gray-300">
+            <ul className="hidden lg:flex items-center gap-[24px] text-[16px] font-medium text-gray-300">
               <li
                 onClick={() => handleScrollTo("why-cryptix")}
                 className="cursor-pointer hover:text-[#1bf1a1] transition-colors"
@@ -271,18 +243,19 @@ const HeroContent = () => {
   return (
     <section
       ref={heroRef}
-      className="w-full min-h-screen text-white pt-50 pb-20 overflow-hidden relative selection:bg-[#1bf1a1] selection:text-black dm-sans bg-[#050505]"
+      className="w-full min-h-screen text-white pt-50 pb-20 overflow-hidden relative selection:bg-[#1bf1a1] selection:text-black dm-sans "
     >
-           <div className="absolute -top-[490px] -left-[395px] w-[930px] h-[930px] bg-[#608cf2] opacity-[0.04] blur-[120px] rounded-full pointer-events-none"></div>
-      <div className="absolute -top-[362px] -left-[347px] w-[694px] h-[694px] bg-[#71abf3] opacity-[0.07] blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute -top-[490px] -left-[395px] w-[930px] h-[930px] bg-[#fff] opacity-[0.01] blur-[120px] rounded-full pointer-events-none"></div>
+      
+      <div className="absolute -top-[362px] -left-[347px] w-[694px] h-[694px] bg-[#abffe6] opacity-[0.05] blur-[120px] rounded-full pointer-events-none"></div>
 
  
       
      
-<div className="absolute -top-[9px] -right-[445px] w-[930px] h-[930px] bg-[#71abf3] opacity-[0.06] blur-[100px] rounded-full aspect-square z-0 pointer-events-none"></div>
+<div className="absolute -top-[54px] -right-[600px] w-[930px] h-[930px] bg-[#fff] opacity-[.01] blur-[90px] rounded-full aspect-square z-0 pointer-events-none"></div>
 
 {/* 2. framer-nqgczc (Teal Glow) */}
-<div className="absolute top-[60px] -right-[504px] w-[694px] h-[694px] bg-[#727e9b] opacity-[0.05] blur-[100px] rounded-full aspect-square z-0 pointer-events-none"></div>
+<div className="absolute top-[60px] -right-[504px] w-[694px] h-[694px] bg-[#abffe6] opacity-[.05] blur-[90px] rounded-full aspect-square z-0 pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
         
@@ -315,7 +288,7 @@ const HeroContent = () => {
           animate={isInView ? "visible" : "hidden"}
           className="mt-6"
         >
-          <button className="group relative inline-flex items-center gap-2 px-4 py-3 bg-[#00ffb2] text-black font-medium rounded-full transition-all duration-300 hover:scale-3d hover:shadow-[0px_0px_0px_5px_#00ffb27a] cursor-pointer">
+          <button className="group relative inline-flex items-center gap-2 px-4 py-3 bg-[#00ffb2] text-black font-medium rounded-full transition-all duration-300 hover:scale-3d hover:shadow-[0px_0px_0px_7px_#00ffb21f] cursor-pointer">
             <span className="relative z-10">Get started now</span>
             <ArrowUpRight className="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
           </button>
@@ -338,8 +311,8 @@ const HeroContent = () => {
                 i === 4 ? (
                   <svg
                     key={i}
-                    width="16"
-                    height="16"
+                    width="14"
+                    height="14"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -376,7 +349,7 @@ const HeroContent = () => {
             </div>
 
             <div className="flex items-center gap-2">
-              <span className="text-white text-sm font-bold">4.9</span>
+              <span className="text-white text-[16px] font-bold">4.9</span>
               <svg
                 viewBox="0 0 24 24"
                 width="16"
@@ -465,7 +438,7 @@ const HeroContent = () => {
         animate={isInView ? "visible" : "hidden"}
         className="max-w-4xl mx-auto px-6 text-center mt-28 relative z-10"
       >
-        <p className="text-zinc-300 text-2xl md:text-3xl lg:text-4xl font-normal leading-snug">
+        <p className="text-zinc-300 text-2xl md:text-3xl lg:text-[40px] font-medium leading-snug">
           {renderWords("Simplicity, performance, and security,")}
           <br className="hidden md:block" />
           {renderWords("empowering you to navigate the digital world")}

@@ -19,9 +19,14 @@ module.exports = {
         }
       },
       animation: {
-        // এই কিফ্রেমটিকে ব্যবহার করে কাস্টম অ্যানিমেশন ক্লাস তৈরি
+       
         'pulse-dog-legs': 'pulse-dog-legs 2s infinite ease-in-out',
       }
+
+      , fontFamily: {
+        // This sets your custom stack
+        sans: ['"DM Sans"', '"DM Sans Placeholder"', 'sans-serif'],
+      },
     },
   },
   plugins: [],
