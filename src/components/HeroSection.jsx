@@ -62,8 +62,8 @@ const HeroSection = () => {
       className="w-full min-h-screen text-white pt-32 pb-20 overflow-hidden relative selection:bg-[#1bf1a1] selection:text-black dm-sans bg-[#050505]"
     >
       {/* 1. Ambient Background Glow */}
-      <div className="absolute -top-80 -left-70 w-[600px] h-[600px] bg-[#3f3f3f] opacity-10 blur-[150px] rounded-full pointer-events-none"></div>
-      <div className="absolute top-40 -right-50 w-[400px] h-[400px] bg-[#3f3f3f] opacity-10 blur-[150px] rounded-full pointer-events-none"></div>
+      <div className="absolute -top-80 -left-70 w-[600px] h-[600px] bg-[#3f3f3f] opacity-60 blur-[150px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-30 -right-50 w-[400px] h-[400px] bg-[#3f3f3f] opacity-60 blur-[150px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
         
@@ -155,19 +155,24 @@ const HeroSection = () => {
           <div className="absolute -top-[1px] left-0 w-full flex justify-center items-center z-50">
              
              {/* 1. Ambient Green Glow (Background Haze) */}
-             <div className="absolute -top-[23px] w-[80%] h-[50px] bg-[#00fd9f] blur-[55px] opacity-30"></div>
+            <div className="absolute -top-[23px] w-[80%] h-[50px] bg-[#00fd9f] blur-[55px] opacity-30"></div>
+            
+             <div className="absolute -top-[23px] w-[65%] h-[18px] bg-[#00fd9f] blur-[40px] opacity-30"></div>
 
              {/* 2. Intense White/Green Core (Center Brightness) */}
-            <div className="absolute  w-[70%] h-10px] bg-[#1BF1A1] blur-[90px] opacity-60 "></div>
+            {/* <div className="absolute  w-[70%] h-10px] bg-[#1BF1A1] blur-[90px] opacity-60 "></div> */}
 
             <div className="absolute  w-[45%] h-[5px] bg-[#1BF1A1] blur-[45px] opacity-54 "></div>
             
-            <div className="absolute  w-[30%] h-[3px] bg-white blur-[50px] opacity-80 "></div>
+            <div className="absolute  w-[30%] h-[10px] bg-white blur-[50px] opacity-80 "></div>
+
+            <div className="absolute  w-[57%] h-[1px] bg-white blur-[10px] opacity-80 "></div>
             
-             <div className="absolute  w-[50%] h-[4px] bg-white blur-[20px] opacity-100 "></div>
+             <div className="absolute  w-[50%] h-[3px] bg-[#c9f4e3] blur-[20px] opacity-75 "></div>
              
              {/* 3. The Sharp White Laser Line (Border) */}
-             <div className="relative w-[60%] h-[2px] bg-gradient-to-r from-transparent via-white via-70% to-transparent opacity-100 shadow-[0_0_15px_rgba(255,255,255,0.9)]"></div>
+             <div className="relative w-[65%] lg:h-[2px] h-[1px] bg-gradient-to-r from-transparent via-white via-50% to-transparent opacity-100 shadow-[0_0_15px_rgba(255,255,255,0.8)] "></div>
+            
 
           </div>
           {/* ---- END GLOW EFFECT ---- */}
@@ -186,7 +191,7 @@ const HeroSection = () => {
                 repeat: Infinity, 
                 repeatDelay: 2 
               }}
-              style={{ boxShadow: "0 0 20px 2px rgba(255, 255, 255, 0.7)" }}
+              // style={{ boxShadow: "0 0 10px 2px rgba(255, 255, 255, 0.7)" }}
             />
             
             {/* Subtle Top Border Line */}
