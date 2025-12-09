@@ -27,70 +27,76 @@ const HowItWorksSection = () => {
   const [headerRef, headerVisible] = useInView();
 
   return (
-    <section className=" text-white border-t border-b border-gray-800" id='how-it-works'>
+    <section className="text-white border px-3 lg:px-0 border-gray-800" id='how-it-works'>
 
       {/* Header Section */}
-        <div className="border-b border-gray-800">
-             <div
-               ref={headerRef}
-               className={`max-w-[1184px] mx-auto flex flex-col lg:flex-row items-start lg:items-end border-l border-r border-gray-800 transition-all duration-700 ease-out
-                 ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
-               `}
-             >
-     
-               {/* Left side */}
-               <div className="border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
-                 {/* UPDATED: Responsive Text Sizes */}
-                 <h2 className="text-3xl md:text-[40px]  font-normal mb-4 ">
-                   How It Works
-                 </h2>
-                 {/* UPDATED: Responsive Text Sizes */}
-                 <p className="text-white text-sm md:text-base lg:text-md leading-relaxed text-gray-400">
-                   A simple, fast, and secure platform to manage your cryptocurrencies in just a few steps.
-                 </p>
-               </div>
-     
-               {/* Right side CTA */}
-               <div className="w-full lg:w-[52.2%] border-l border-gray-800">
-                 <div className="border-b border-gray-800 py-9 w-full"></div>
-     
-                 <a
-                   href="#"
-                   className="hidden md:flex gap-2 justify-end items-center p-5 text-[#00ffb2] font-medium whitespace-nowrap w-full transition-all duration-700 ease-out hover:bg-green-400/5"
-                 >
-                   Create account now
-                   <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                 </a>
-               </div>
-     
-             </div>
-           </div>
+      <div className="border-b border-gray-800">
+        <div
+          ref={headerRef}
+          className={`max-w-[1184px] mx-auto flex flex-col lg:flex-row text-center lg:text-start items-start lg:items-end border-l border-r border-gray-800 transition-all duration-700 ease-out
+            ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
+          `}
+        >
+          {/* Left side */}
+          <div className="border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
+            <h2 className="text-[24px] lg:text-[40px] font-normal mb-4">
+              How It Works
+            </h2>
+            <p className="text-white text-[16px] md:text-base lg:text-md leading-relaxed text-gray-400">
+              A simple, fast, and secure platform to manage your cryptocurrencies in just a few steps.
+            </p>
+          </div>
+
+          {/* Right side CTA */}
+          <div className="w-full lg:w-[52.2%] border-l border-gray-800">
+            <div className="border-b hidden lg:flex border-gray-800 py-9 w-full"></div>
+
+            <a
+              href="#"
+              className="flex gap-2 justify-center lg:justify-end items-center p-6 text-[#00ffb2] font-medium whitespace-nowrap w-full transition-all duration-700 ease-out hover:bg-green-400/5 border-t border-gray-800"
+            >
+              Create account now
+              <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </a>
+          </div>
+
+        </div>
+      </div>
 
       {/* Three Steps Grid */}
-      <div className="max-w-[1184px] mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-800 border-l border-r border-gray-800 bg-[#05090a]">
+      <div className="max-w-[1184px] mx-auto grid grid-cols-1 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-800 border-l border-r border-gray-800 ">
 
+        {/* Card 1: Left Side Glow */}
         <StepCard
           number="1"
           title="Create your account"
           description="Sign up easily and secure your profile in just a few steps."
           image="https://framerusercontent.com/images/8RXktcqw0OFHZYhz2pBHj5wAQ.png?scale-down-to-1024&width=1440&height=1080"
           delay={0}
+        
+          customGlow="absolute -top-[165px] -left-[80px] w-[396px] h-[396px] bg-[#fff] rounded-full blur-[79px] opacity-[0.08] z-[2] pointer-events-none"
         />
 
+        {/* Card 2: Center Glow */}
         <StepCard
           number="2"
           title="Fund your wallet"
           description="Add funds securely using your preferred payment method."
           image="https://framerusercontent.com/images/h8kNOBrYHUwyj1XhxL3Hi3k.png?scale-down-to-1024&width=1440&height=1080"
           delay={100}
+         
+          customGlow="absolute -top-[188px] left-1/2 -translate-x-1/2 w-[396px] h-[396px] bg-[#fff] rounded-full blur-[79px] opacity-[0.08] z-[2] pointer-events-none"
         />
 
+        {/* Card 3: Right Side Glow */}
         <StepCard
           number="3"
           title="Buy, sell, or convert"
           description="Start trading cryptocurrencies instantly and safely."
           image="https://framerusercontent.com/images/miiIJ7oMUdFOKJLBBVDKoDIlS4.png?scale-down-to-1024&width=1440&height=1080"
           delay={200}
+         
+          customGlow="absolute -top-[240px] -right-[91px] w-[396px] h-[396px] bg-[#fff] rounded-full blur-[79px] opacity-[0.08] z-[2] pointer-events-none"
         />
 
       </div>
@@ -98,31 +104,36 @@ const HowItWorksSection = () => {
   );
 };
 
-const StepCard = ({ number, title, description, image, delay }) => {
+// Updated Component accepting customGlow
+const StepCard = ({ number, title, description, image, delay, customGlow }) => {
   const [ref, visible] = useInView();
 
   return (
     <div className="relative group">
 
       {/* Image Area */}
-      <div className="relative mb-6 overflow-hidden bg-[#141319]">
-        {/* Image with Scale on Hover */}
+      <div className={`relative mb-6 overflow-hidden `}>
+        
+        {/* 🔥 Custom Glow Effect Rendered Here 🔥 */}
+        {customGlow && <div className={customGlow}></div>}
+
+        {/* Image */}
         <img
           src={image}
           alt={title}
-          className="w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          className="relative z-10 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
         />
 
-        {/* Number Badge with Inner Shadow */}
-        <span className="absolute top-4 left-4 backdrop-blur-md bg-black/40 p-2 h-12 w-12 text-lg font-semibold text-white rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,0.1)] border border-white/5">
+        {/* Number Badge */}
+        <span className="absolute top-4 left-4 z-20 backdrop-blur-md bg-black/40 p-2 h-12 w-12 text-lg font-semibold text-white rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,0.1)] border border-white/5">
           {number}
         </span>
 
         {/* Bottom Gradient Fade */}
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#05090a] to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#05090a] to-transparent z-10"></div>
       </div>
 
-      {/* Text Area with Fade Up Animation */}
+      {/* Text Area */}
       <div
         ref={ref}
         style={{ transitionDelay: `${delay}ms` }}

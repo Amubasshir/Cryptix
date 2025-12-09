@@ -24,7 +24,7 @@ const FeatureCard = ({ icon: Icon, title, description, delay, className }) => (
     viewport={{ once: true, margin: "-50px" }}
     // Responsive Padding: p-6 on mobile, p-8 on desktop
     // Responsive Borders: Handled via className prop passed from parent
-    className={`flex flex-col items-start p-3 md:p-5 transition-colors duration-300 h-full group border-gray-800 ${className}`}
+    className={`flex flex-col items-start p-3  transition-colors duration-300 h-full group border-gray-800 ${className}`}
   >
     {/* Icon Container */}
     <div className="w-16 h-16 mb-4 md:mb-6 rounded-full border border-gray-800 flex items-center justify-center transition-colors shadow-[inset_0_0_10px_rgba(255,255,255,0.05)]  bg-white/[0.01]">
@@ -34,7 +34,7 @@ const FeatureCard = ({ icon: Icon, title, description, delay, className }) => (
     <h3 className="text-sm font-medium tracking-[0.08em] mb-2 md:mb-3 text-white uppercase">
       {title}
     </h3>
-    <p className="text-sm md:text-base font-medium text-gray-400 leading-relaxed max-w-xs">
+    <p className="text-sm md:text-base font-medium text-gray-400 leading-relaxed lg:max-w-xs">
       {description}
     </p>
   </motion.div>
@@ -51,7 +51,7 @@ const WhyCryptix = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-3xl md:text-[40px] font-normal mb-4 tracking-tight"
+          className="text-[24px] lg:text-[40px] font-normal mb-4 tracking-tight"
         >
           Why Choose Cryptix?
         </motion.h2>
@@ -68,10 +68,10 @@ const WhyCryptix = () => {
       </div>
 
       {/* Grid Section */}
-      <div className="border-t border-b border-gray-800">
+      <div className="border border-gray-800">
         {/* max-w updated for responsive margins */}
-        <div className="max-w-[1184px] mx-auto border-x border-gray-800">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="max-w-[1184px] mx-auto lg:px-0  px-3">
+          <div className="grid grid-cols-1  lg:grid-cols-4 border border-gray-800">
             
             <FeatureCard
               icon={Home} 

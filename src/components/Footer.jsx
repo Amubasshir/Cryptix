@@ -7,7 +7,7 @@ const Footer = () => {
       {/* Container with vertical borders to match previous sections */}
       <div className="max-w-[1184px] mx-auto border-x border-white/10">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-25 px-6 py-16 md:px-12 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-22 px-6 py-16 md:px-12 md:py-20">
           
           {/* LEFT SECTION: Brand & Credits (Spans 7 columns on desktop) */}
           <div className="lg:col-span-7 flex flex-col justify-between h-full space-y-12 lg:space-y-0">

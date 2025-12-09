@@ -41,7 +41,7 @@ const CTASection = () => {
   return (
     <section 
       ref={containerRef} 
-      className="w-full flex justify-center items-center overflow-hidden relative "
+      className="w-full flex justify-center px-3 lg:px-0 items-center overflow-hidden relative "
     >
       
       {/* Grid Container */}
