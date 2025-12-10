@@ -85,7 +85,8 @@ const Navbar = () => {
         <div className="py-4 md:py-6 flex items-center justify-between px-6 md:px-5 lg:px-0">
           
           {/* Logo */}
-          <div 
+          <div className="flex items-center gap-8">
+              <div 
             className="flex items-center gap-2 cursor-pointer z-50"
             onClick={() => window.scrollTo(0, 0)}
           >
@@ -100,6 +101,7 @@ const Navbar = () => {
             <li onClick={() => handleScrollTo("TestimonialGrid")} className="cursor-pointer hover:text-white transition-colors">Testimonials</li>
             <li onClick={() => handleScrollTo("FAQ")} className="cursor-pointer hover:text-white transition-colors">FAQ</li>
           </ul>
+        </div>
 
           {/* Desktop Button */}
           <button className={`${buttonClass} hidden lg:block`}>
