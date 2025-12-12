@@ -39,7 +39,7 @@ const CryptoPlatform = () => {
             <div className="p-6  mb-8">
               <motion.h2
                 variants={fadeUp(0.2)}
-                className="text-[24px] tracking-wide lg:text-[40px] font-normal mb-6 text-[#f5f5f5]"
+                className="text-[24px] tracking-wide lg:text-[40px] font-normal mb-3 text-[#f5f5f5]"
               >
                 All Cryptos, One Platform
               </motion.h2>
