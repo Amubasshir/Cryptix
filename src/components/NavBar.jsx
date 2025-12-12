@@ -362,9 +362,9 @@ const HeroContent = () => {
         variants={textContainer}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="max-w-4xl mx-auto px-6 text-center mt-28 relative z-10"
+        className="max-w-[57rem] mx-auto px-6 text-center mt-28 relative z-10"
       >
-        <p className="text-[#f5f5f5] text-[32px] md:text-[40px] font-normal tracking-wide leading-20 md:leading-[1.2] dm-sans">
+        <p className="text-[#f5f5f5] text-[20px] md:text-[22px] lg:text-[40px] font-normal tracking-wide  dm-sans">
           {renderWords("Simplicity, performance, and security,")}
          
           {renderWords("empowering you to navigate the digital world")}
