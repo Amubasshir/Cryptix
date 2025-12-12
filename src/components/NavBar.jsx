@@ -82,7 +82,7 @@ const Navbar = () => {
       }`}
     >
       <div className="w-full max-w-[1184px] mx-auto text-white relative">
-        <div className="py-4 md:py-6 flex items-center justify-between px-6 md:px-5 lg:px-0">
+        <div className="py-4 md:py-6 flex items-center justify-between px-3 md:px-5 lg:px-0">
           
           {/* Logo */}
           <div className="flex items-center gap-8">
@@ -252,7 +252,7 @@ const HeroContent = () => {
       <div className="absolute -top-[54px] -right-[600px] w-[930px] h-[930px] bg-[#fff] opacity-[.01] blur-[90px] rounded-full aspect-square z-0 pointer-events-none"></div>
       <div className="absolute top-[60px] -right-[504px] w-[694px] h-[694px] bg-[#abffe6] opacity-[.05] blur-[90px] rounded-full aspect-square z-0 pointer-events-none"></div>
 
-      <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+      <div className="max-w-6xl mx-auto px-5 text-center relative z-10">
         <motion.h1
           variants={blurFadeUp(0.1)}
           initial="hidden"
@@ -362,7 +362,7 @@ const HeroContent = () => {
         variants={textContainer}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="max-w-[57rem] mx-auto px-2 text-center mt-28 relative z-10"
+        className="max-w-[57rem] w-full mx-auto px-2 text-center mt-28 relative z-10"
       >
         <p className="text-[#f5f5f5] text-[24px] lg:text-[40px] font-normal md:tracking-wide leading-[-.02em] dm-sans">
           {renderWords("Simplicity, performance, and security,")}
@@ -373,6 +373,9 @@ const HeroContent = () => {
      
         </p>
       </motion.div>
+
+     
+
     </section>
   );
 };
