@@ -39,10 +39,10 @@ const HowItWorksSection = () => {
         >
           {/* Left side */}
           <div className="border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
-            <h2 className="text-[24px] lg:text-[40px] font-normal mb-4">
+            <h2 className="text-[24px] lg:text-[40px] font-normal  tracking-wide text-[#f5f5f5] mb-2">
               How It Works
             </h2>
-            <p className="text-white text-[16px] md:text-base lg:text-md leading-relaxed text-gray-400">
+            <p className=" text-[16px] md:text-base lg:text-md leading-relaxed text-[#d5d5d5] font-light tracking-wide">
               A simple, fast, and secure platform to manage your cryptocurrencies in just a few steps.
             </p>
           </div>
@@ -81,7 +81,7 @@ const HowItWorksSection = () => {
         <StepCard
           number="2"
           title="Fund your wallet"
-          description="Add funds securely using your preferred payment method."
+          description="Deposit your cryptos or make a transfer to start trading."
           image="https://framerusercontent.com/images/h8kNOBrYHUwyj1XhxL3Hi3k.png?scale-down-to-1024&width=1440&height=1080"
           delay={100}
          
@@ -92,7 +92,7 @@ const HowItWorksSection = () => {
         <StepCard
           number="3"
           title="Buy, sell, or convert"
-          description="Start trading cryptocurrencies instantly and safely."
+          description="Enjoy the simplicity of a platform that makes every transaction seamless in real-time."
           image="https://framerusercontent.com/images/miiIJ7oMUdFOKJLBBVDKoDIlS4.png?scale-down-to-1024&width=1440&height=1080"
           delay={200}
          
@@ -137,12 +137,12 @@ const StepCard = ({ number, title, description, image, delay, customGlow }) => {
       <div
         ref={ref}
         style={{ transitionDelay: `${delay}ms` }}
-        className={`px-6 pb-10 pt-2 transition-all duration-700 ease-out transform
+        className={`px-5 pb-10 pt-2 transition-all duration-700 ease-out transform
           ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
         `}
       >
-        <h3 className="text-xl font-medium mb-3 text-white">{title}</h3>
-        <p className="text-gray-400 text-base leading-relaxed">{description}</p>
+        <h3 className="text-xl font-medium mb-3 text-[#f5f5f5]">{title}</h3>
+        <p className="font-normal tracking-wide text-[#d5d5d5]  text-[16px] leading-relaxed">{description}</p>
       </div>
     </div>
   );

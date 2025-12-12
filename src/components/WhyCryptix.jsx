@@ -31,10 +31,10 @@ const FeatureCard = ({ icon: Icon, title, description, delay, className }) => (
       <Icon strokeWidth={1.5} className="w-6 h-6 text-white" />
     </div>
     
-    <h3 className="text-sm font-medium tracking-[0.08em] mb-2 md:mb-3 text-white uppercase">
+    <h3 className="text-[16px] font-medium tracking-wide mb-2 md:mb-3 text-[#f5f5f5] ">
       {title}
     </h3>
-    <p className="text-sm md:text-base font-medium text-gray-400 leading-relaxed lg:max-w-xs">
+    <p className="text-sm md:text-[16px] font-light tracking-wide text-[#d5d5d5] leading-relaxed lg:max-w-xs">
       {description}
     </p>
   </motion.div>
@@ -42,7 +42,7 @@ const FeatureCard = ({ icon: Icon, title, description, delay, className }) => (
 
 const WhyCryptix = () => {
   return (
-    <section id="why-cryptix" className="w-full  md:pt-24  text-white">
+    <section id="why-cryptix" className="w-full  md:pt-10  text-white">
       
       {/* Header Text */}
       <div className="text-center px-4 md:px-6 mb-6 md:mb-10">
@@ -61,7 +61,7 @@ const WhyCryptix = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="text-base md:text-[16px] text-gray-300 max-w-2xl mx-auto font-medium leading-relaxed"
+          className="text-base md:text-[16px] text-[#d5d5d5] max-w-[43rem] mx-auto font-light tracking-wide leading-relaxed"
         >
           Benefits designed to provide a seamless, secure, and accessible experience for all users.
         </motion.p>
@@ -105,7 +105,7 @@ const WhyCryptix = () => {
             <FeatureCard
               icon={Monitor}
               title="Premium Interface"
-              description="An elegant, intuitive design that's easy to use."
+              description="An elegant, intuitive design that’s easy to use, even for beginners."
               delay={0.65}
               // Tablet & Desktop: No borders (Last item).
               className="md:border-r-0 border-b-0"

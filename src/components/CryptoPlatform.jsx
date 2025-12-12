@@ -39,14 +39,14 @@ const CryptoPlatform = () => {
             <div className="p-6  mb-8">
               <motion.h2
                 variants={fadeUp(0.2)}
-                className="text-[24px] lg:text-[40px] font-normal mb-6 text-white"
+                className="text-[24px] tracking-wide lg:text-[40px] font-normal mb-6 text-[#f5f5f5]"
               >
                 All Cryptos, One Platform
               </motion.h2>
 
               <motion.p
                 variants={fadeUp(0.35)}
-                className="text-md text-gray-200 leading-relaxed w-full"
+                className="text-[16px] font-light  tracking-wide text-[#d5d5d5]  leading-relaxed w-full"
               >
                 Buy, sell, and convert all major cryptocurrencies on a single platform. 
                 A smooth experience with no compromises.

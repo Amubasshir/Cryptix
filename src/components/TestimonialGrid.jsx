@@ -88,10 +88,10 @@ const TestimonialGrid = () => {
         {/* Header Section */}
         <div className="text-center">
           <div className="py-5 text-center border-l border-r max-w-[1184px] mx-auto border-white/10">
-            <h2 className="text-[24px] lg:text-[40px] font-normal leading-9 mb-4 text-white">
+            <h2 className="text-[24px] lg:text-[40px] font-normal leading-9 mb-4 text-[#f5f5f5] tracking-wide">
               Trusted by Crypto Enthusiasts Worldwide
             </h2>
-            <p className="text-zinc-400 text-[16px] md:text-base leading-5 font-medium max-w-6xl mx-auto lg:px-0 px-3">
+            <p className="text-[#d5d5d5] md:text-[16px] text-base leading-5 font-medium max-w-6xl mx-auto lg:px-0 px-3 tracking-wide">
               Join a growing community of investors who choose Cryptix for its seamless experience, security, and premium design.
             </p>
           </div>
@@ -125,8 +125,8 @@ const TestimonialGrid = () => {
                       />
                     </motion.div>
 
-                    <blockquote className="text-[20px] md:text-2xl lg:text-3xl font-normal leading-relaxed text-zinc-100">
-                      <span className="text-zinc-500 mr-2">"</span>
+                    <blockquote className="text-[20px] md:text-[28px]  font-normal leading-relaxed text-[#f5f5f5]">
+                      <span className="text-[#f5f5f5] mr-2">"</span>
                       {words.map((word, i) => (
                         <motion.span
                           key={i}
@@ -136,7 +136,7 @@ const TestimonialGrid = () => {
                           {word}
                         </motion.span>
                       ))}
-                      <span className="text-zinc-500 ml-1">"</span>
+                      <span className="text-[#f5f5f5] ml-1">"</span>
                     </blockquote>
                   </div>
 
@@ -188,8 +188,6 @@ const TestimonialGrid = () => {
               
             </div>
           </div>
-
-          {/* Decorative Line */}
           <div className="h-px w-full bg-white/10"></div>
         </div>
       </div>

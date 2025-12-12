@@ -267,7 +267,7 @@ const HeroContent = () => {
           variants={blurFadeUp(0.25)}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="text-zinc-200 mt-4 max-w-[40rem] md:max-w-[42rem] mx-auto text-[18px] font-normal dm-sans"
+          className="text-[#d5d5d5] mt-4 max-w-[40rem] md:max-w-[42rem] mx-auto text-[18px] font-light tracking-wide dm-sans"
         >
           Cryptix offers a seamless, secure experience for managing your digital assets.
           Instant transactions, optimized fees, and premium design.
@@ -364,14 +364,13 @@ const HeroContent = () => {
         animate={isInView ? "visible" : "hidden"}
         className="max-w-4xl mx-auto px-6 text-center mt-28 relative z-10"
       >
-        <p className="text-zinc-300 text-2xl md:text-3xl lg:text-[40px] font-medium leading-snug">
+        <p className="text-[#f5f5f5] text-[32px] md:text-[40px] font-normal tracking-wide leading-20 md:leading-[1.2] dm-sans">
           {renderWords("Simplicity, performance, and security,")}
-          <br className="hidden md:block" />
+         
           {renderWords("empowering you to navigate the digital world")}
-          <br className="hidden md:block" />
-          <span className="text-white font-medium">
+
             {renderWords("with confidence and agility.")}
-          </span>
+     
         </p>
       </motion.div>
     </section>

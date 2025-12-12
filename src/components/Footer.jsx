@@ -21,7 +21,7 @@ const Footer = () => {
                
               </div>
 
-              <p className="text-[16px] leading-relaxed max-w-sm font-normal">
+              <p className="text-[16px] leading-relaxed max-w-sm font-normal tracking-wide">
                 Secure, fast, and seamless crypto trading.<br />
                 Cryptix makes digital assets effortless.
               </p>
@@ -49,7 +49,7 @@ const Footer = () => {
             {/* Column 1: Navigation */}
             <div>
               <h3 className="text-white font-medium mb-6">Navigation</h3>
-              <ul className="space-y-4 text-zinc-400 text-sm">
+              <ul className="space-y-4 text-[#d5d5d5] text-sm">
                 <li><a href="#" className="hover:text-white transition-colors">Why Cryptix?</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Cryptos</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">How it works</a></li>
@@ -61,7 +61,7 @@ const Footer = () => {
             {/* Column 2: Socials */}
             <div>
               <h3 className="text-white font-medium mb-6">Socials</h3>
-              <ul className="space-y-4 text-zinc-400 text-sm">
+              <ul className="space-y-4 text-[#d5d5d5] text-sm">
                 <li><a href="#" className="hover:text-white transition-colors">Twitter (X)</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>

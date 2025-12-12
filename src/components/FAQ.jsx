@@ -84,10 +84,10 @@ const FAQ = () => {
           `}
         >
           <div className="border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
-            <h2 className="text-[24px] lg:text-[40px] font-normal mb-4 tracking-tight">
+            <h2 className="text-[24px] lg:text-[40px] font-normal mb-4 tracking-wide">
               Your Questions, Answered
             </h2>
-            <p className="text-white text-sm md:text-base lg:text-md leading-relaxed text-gray-400">
+            <p className="text-[#d5d5d5] text-sm md:text-[16px]  leading-relaxed ">
               Find everything you need to know about Cryptix, from security to supported assets.
             </p>
           </div>
