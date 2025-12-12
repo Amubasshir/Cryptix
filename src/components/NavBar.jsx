@@ -82,7 +82,7 @@ const Navbar = () => {
       }`}
     >
       <div className="w-full max-w-[1184px] mx-auto text-white relative">
-        <div className="py-4 md:py-6 flex items-center justify-between px-3 md:px-5 lg:px-0">
+        <div className="py-3 md:py-6 flex items-center justify-between px-4 md:px-5 lg:px-0">
           
           {/* Logo */}
           <div className="flex items-center gap-8">
@@ -257,7 +257,7 @@ const HeroContent = () => {
           variants={blurFadeUp(0.1)}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="text-4xl md:text-7xl lg:text-[82px] font-medium leading-[1.09]   md:leading-[1.05] tracking-wide text-white dm-sans"
+          className="text-[40px] md:text-7xl lg:text-[82px] font-medium leading-[1.2]   md:leading-[1.05] tracking-wide text-white dm-sans"
         >
           Take Control of
           <span className="block text-white/90 ">Your Digital Assets</span>
