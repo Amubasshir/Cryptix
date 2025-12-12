@@ -90,7 +90,7 @@ const Navbar = () => {
             className="flex items-center gap-2 cursor-pointer z-50"
             onClick={() => window.scrollTo(0, 0)}
           >
-            <img src="https://framerusercontent.com/images/4ApMrTB8uizXZ8qPNGF601tK8.svg" alt="Logo" />
+            <img src="https://framerusercontent.com/images/4ApMrTB8uizXZ8qPNGF601tK8.svg" alt="Logo" className="w-[90%] md:w-[100%]"/>
           </div>
 
           {/* DESKTOP MENU */}
@@ -112,15 +112,15 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center z-50">
             <button
               onClick={() => setOpen(!open)}
-              className="focus:outline-none text-white p-2 relative w-10 h-10 flex items-center justify-center"
+              className="focus:outline-none text-white p-2 relative w-12 h-10 flex items-center justify-center"
             >
               <motion.div
-                className="w-6 flex flex-col items-end gap-[5px]"
+                className="w-8 flex flex-col items-end gap-[6px]"
                 animate={open ? "open" : "closed"}
               >
                 {/* Top Line */}
                 <motion.span
-                  className="w-full h-[2px] bg-white rounded-full origin-center"
+                  className="w-full h-[2px] bg-white rounded-full"
                   variants={{
                     closed: { rotate: 0, y: 0 },
                     open: { rotate: 45, y: 7 } 
@@ -140,7 +140,7 @@ const Navbar = () => {
                 
                 {/* Bottom Line */}
                 <motion.span
-                  className="w-full h-[2px] bg-white rounded-full origin-center"
+                  className="w-full h-[2px] bg-white rounded-full "
                   variants={{
                     closed: { rotate: 0, y: 0 },
                     open: { rotate: -45, y: -7 }
@@ -365,6 +365,7 @@ const HeroContent = () => {
         className="max-w-[57rem] w-full mx-auto px-2 text-center mt-28 relative z-10"
       >
         <p className="text-[#f5f5f5] text-[24px] lg:text-[40px] font-normal md:tracking-wide leading-[-.02em] dm-sans">
+          
           {renderWords("Simplicity, performance, and security,")}
          
           {renderWords("empowering you to navigate the digital world")}
