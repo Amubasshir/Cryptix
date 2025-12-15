@@ -131,12 +131,12 @@ const TestimonialGrid = () => {
                   </motion.div>
 
                   {/* Quote */}
-                  <blockquote className="text-[20px] md:text-[28px] font-normal leading-relaxed text-[#f5f5f5]">
+                  <blockquote className="text-[20px] md:text-[28px] font-normal leading-relaxed text-[#f5f5f5] ">
                     {words.map((word, i) => (
                       <motion.span
                         key={i}
                         variants={wordVariants}
-                        className="inline-block mr-2"
+                        className="inline-block mr-[5px]"
                       >
                         {word}
                       </motion.span>
