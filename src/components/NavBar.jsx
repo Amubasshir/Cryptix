@@ -20,7 +20,7 @@ const Navbar = () => {
   const buttonClass = `px-4 py-2 rounded-full transition-colors duration-300 cursor-pointer font-medium ${
     scrolled
       ? "bg-[#00ffb2] text-black hover:shadow-[0px_0px_0px_7px_#00ffb21f]"
-      : "bg-white/10 hover:bg-white/20 text-white"
+      : "bg-white/0 hover:bg-white/20 text-white"
   }`;
 
   const handleScrollTo = (id) => {
