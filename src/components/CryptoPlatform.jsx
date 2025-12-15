@@ -20,9 +20,9 @@ const CryptoPlatform = () => {
   return (
     <section 
       id="Cryptos" 
-      className="w-full  border px-3 lg:px-0 border-gray-800"
+      className="w-full  border px-3 lg:px-0 border-[#1d1d22]"
     >
-      <div className="max-w-[1184px] mx-auto border-x border-gray-800">
+      <div className="max-w-[1184px] mx-auto border-x border-[#1d1d22]">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 text-center lg:text-left">
 
@@ -33,7 +33,7 @@ const CryptoPlatform = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
            
-            className="lg:col-span-6 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-gray-800 "
+            className="lg:col-span-6 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#1d1d22] "
           >
             {/* Text Content */}
             <div className="p-6  mb-8">
@@ -59,7 +59,7 @@ const CryptoPlatform = () => {
             >
               <a
                 href="#"
-                className="flex items-center justify-center lg:justify-start gap-3 p-5 border-t border-gray-800 text-[#00ffb2] font-medium group hover:bg-green-400/5 transition-colors duration-300 "
+                className="flex items-center justify-center lg:justify-start gap-3 p-5 border-t border-[#1d1d22] text-[#00ffb2] font-medium group hover:bg-green-400/5 transition-colors duration-300 "
               >
                 <span>Buy crypto now</span>
                 <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />

@@ -41,7 +41,7 @@ const CTASection = () => {
   return (
     <section 
       ref={containerRef} 
-      className="w-full flex justify-center px-3 lg:px-0 items-center overflow-hidden relative "
+      className="w-full flex justify-center px-3 lg:px-0 items-center overflow-hidden relative border-y border-[#1d1d22] "
     >
       
       {/* Grid Container */}
@@ -56,7 +56,7 @@ const CTASection = () => {
             variants={lineVariant(0)}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#6c716f] to-transparent opacity-50 origin-center"
+            className="w-full  origin-center"
           ></motion.div>
           
           {/* Glow Effect */}
@@ -69,7 +69,7 @@ const CTASection = () => {
         </div>
 
         {/* Content Area with Borders */}
-        <div className="max-w-[1184px] mx-auto border-x border-white/10 relative">
+        <div className="max-w-[1184px] mx-auto border-x border-[#1d1d22]  relative">
           
           <div className="relative py-20 px-6 md:px-12 text-center overflow-hidden">
             
@@ -134,7 +134,7 @@ const CTASection = () => {
                variants={lineVariant(0.5)}
                initial="hidden"
                animate={isInView ? "visible" : "hidden"}
-               className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#00ffb2] to-transparent opacity-50 origin-center"
+               className="w-[50%] h-[1px] bg-gradient-to-r from-transparent via-[#00ffb36b] to-transparent opacity-10 origin-center"
             ></motion.div>
             
             {/* Glow Effect */}

@@ -27,18 +27,18 @@ const HowItWorksSection = () => {
   const [headerRef, headerVisible] = useInView();
 
   return (
-    <section className="text-white border px-3 lg:px-0 border-gray-800" id='how-it-works'>
+    <section className="text-white border px-3 lg:px-0 border-[#1d1d22]" id='how-it-works'>
 
       {/* Header Section */}
-      <div className="border-b border-gray-800">
+      <div className="border-b border-[#1d1d22]">
         <div
           ref={headerRef}
-          className={`max-w-[1184px] mx-auto flex flex-col lg:flex-row text-center lg:text-start items-start lg:items-end border-l border-r border-gray-800 transition-all duration-700 ease-out
+          className={`max-w-[1184px] mx-auto flex flex-col lg:flex-row text-center lg:text-start items-start lg:items-end border-l border-r border-[#1d1d22] transition-all duration-700 ease-out
             ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
           `}
         >
           {/* Left side */}
-          <div className="border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
+          <div className="border-[#1d1d22] border-r w-full lg:max-w-4xl p-6 lg:pr-20">
             <h2 className="text-[24px] lg:text-[40px] font-normal  tracking-wide text-[#f5f5f5] mb-2">
               How It Works
             </h2>
@@ -48,12 +48,12 @@ const HowItWorksSection = () => {
           </div>
 
           {/* Right side CTA */}
-          <div className="w-full lg:w-[52.2%] border-l border-gray-800">
-            <div className="border-b hidden lg:flex border-gray-800 py-9 w-full"></div>
+          <div className="w-full lg:w-[52.2%] ">
+            <div className=" hidden lg:flex border-[#1d1d22] py-9 w-full"></div>
 
             <a
               href="#"
-              className="flex gap-2 justify-center lg:justify-end items-center p-6 text-[#00ffb2] font-medium whitespace-nowrap w-full transition-all duration-700 ease-out hover:bg-green-400/5 border-t border-gray-800"
+              className="flex items-center justify-center lg:justify-start gap-3 p-6 border-t border-[#1d1d22] text-[#00ffb2] font-medium group hover:bg-green-400/5 transition-colors duration-300 "
             >
               Create account now
               <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -64,7 +64,7 @@ const HowItWorksSection = () => {
       </div>
 
       {/* Three Steps Grid */}
-      <div className="max-w-[1184px] mx-auto grid grid-cols-1 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-800 border-l border-r border-gray-800 ">
+      <div className="max-w-[1184px] mx-auto grid grid-cols-1 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-800 border-l border-r border-[#1d1d22] ">
 
         {/* Card 1: Left Side Glow */}
         <StepCard

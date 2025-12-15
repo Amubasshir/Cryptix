@@ -24,10 +24,10 @@ const FeatureCard = ({ icon: Icon, title, description, delay, className }) => (
     viewport={{ once: true, margin: "-50px" }}
     // Responsive Padding: p-6 on mobile, p-8 on desktop
     // Responsive Borders: Handled via className prop passed from parent
-    className={`flex flex-col items-start p-3  transition-colors duration-300 h-full group border-gray-800 ${className}`}
+    className={`flex flex-col items-start p-3  transition-colors duration-300 h-full group border-[#1d1d22] ${className}`}
   >
     {/* Icon Container */}
-    <div className="w-16 h-16 mb-4 md:mb-6 rounded-full border border-gray-800 flex items-center justify-center transition-colors shadow-[inset_0_0_10px_rgba(255,255,255,0.05)]  bg-white/[0.01]">
+    <div className="w-16 h-16 mb-4 md:mb-6 rounded-full border border-[#1d1d22] flex items-center justify-center transition-colors shadow-[inset_0_0_10px_rgba(255,255,255,0.05)]  bg-white/[0.01]">
       <Icon strokeWidth={1.5} className="w-6 h-6 text-white" />
     </div>
     
@@ -68,10 +68,10 @@ const WhyCryptix = () => {
       </div>
 
       {/* Grid Section */}
-      <div className="border border-gray-800">
+      <div className="border border-[#1d1d22]">
         {/* max-w updated for responsive margins */}
         <div className="max-w-[1184px] mx-auto lg:px-0  px-3">
-          <div className="grid grid-cols-1  lg:grid-cols-4 border border-gray-800">
+          <div className="grid grid-cols-1  lg:grid-cols-4 border-l border-r border-[#1d1d22]">
             
             <FeatureCard
               icon={Home} 

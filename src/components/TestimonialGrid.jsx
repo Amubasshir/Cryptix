@@ -81,13 +81,13 @@ const TestimonialGrid = () => {
   const words = currentTestimonial.quote.split(" ");
 
   return (
-    <div className="w-full border px-3 lg:px-0 border-gray-800 text-white selection:bg-white/20" id='TestimonialGrid'>
+    <div className="w-full border px-3 lg:px-0 border-[#1d1d22]  text-white selection:bg-white/20" id='TestimonialGrid'>
       
-      <div className="border-x border-white/10">
+      <div className="">
         
         {/* Header Section */}
         <div className="text-center">
-          <div className="py-5 text-center border-l border-r max-w-[1184px] mx-auto border-white/10">
+          <div className="py-5 text-center border-l border-r max-w-[1184px] mx-auto border-[#1d1d22] ">
             <h2 className="text-[24px] lg:text-[40px] font-normal leading-9 mb-4 text-[#f5f5f5] tracking-wide">
               Trusted by Crypto Enthusiasts Worldwide
             </h2>
@@ -97,12 +97,12 @@ const TestimonialGrid = () => {
           </div>
         </div>
 
-        <div className="max-w-[1184px] mx-auto border-x border-white/10">
+        <div className="max-w-[1184px] mx-auto border-x border-[#1d1d22] ">
           {/* Grid Section */}
           <div className="grid grid-cols-1 lg:grid-cols-3 min-h-[480px]">
             
             {/* Left: Active Testimonial Card */}
-            <div className="lg:col-span-2 p-8 md:p-12 lg:border-r border-white/10 relative overflow-hidden">
+            <div className="lg:col-span-2 p-8 md:p-12 lg:border-r border-t border-[#1d1d22]  relative overflow-hidden">
               <div className="absolute -top-[585px] -left-[183px] w-[949px] h-[949px] bg-[#fff] opacity-[0.08] blur-[88px] rounded-full pointer-events-none"></div>
 
               <AnimatePresence mode='wait'>
@@ -160,13 +160,13 @@ const TestimonialGrid = () => {
             <div className="col-span-1 flex lg:flex-col w-full">
               
               {/* Empty Space filler (Desktop only) */}
-              <div className="flex-grow hidden lg:block border-t border-white/10"></div>
+              <div className="flex-grow hidden lg:block border-t border-[#1d1d22] "></div>
 
               {/* Previous Button */}
               <button 
                 onClick={handlePrev}
                 // UPDATE: flex-1 ensures equal width on tablet/mobile, lg:flex-none prevents vertical stretching on desktop
-                className="flex-1 lg:flex-none group flex items-center justify-between lg:px-8 px-6 py-8 border-t border-r border-white/10 hover:bg-white/5 transition-colors duration-200 text-left"
+                className="flex-1 lg:flex-none group flex items-center justify-between lg:px-8 px-6 py-8 border-t  border-[#1d1d22]   transition-colors duration-200 text-left"
               >
                 <span className="flex items-center gap-3 text-zinc-400 group-hover:text-white transition-colors font-bold">
                   <ChevronLeft size={20} />
@@ -178,7 +178,7 @@ const TestimonialGrid = () => {
               <button 
                 onClick={handleNext}
                 // UPDATE: flex-1 ensures equal width on tablet/mobile, lg:flex-none prevents vertical stretching on desktop
-                className="flex-1 lg:flex-none group flex items-center justify-between px-9 py-8 hover:bg-white/5 transition-colors duration-200 text-right border-t border-white/10"
+                className="flex-1 lg:flex-none group flex items-center justify-between px-9 py-8 hover:bg-white/5 transition-colors duration-200 text-right border-t border-[#1d1d22] "
               >
                 <span className="w-full flex items-center justify-end gap-3 text-zinc-400 group-hover:text-white transition-colors font-bold">
                   Next
@@ -188,7 +188,7 @@ const TestimonialGrid = () => {
               
             </div>
           </div>
-          <div className="h-px w-full bg-white/10"></div>
+          
         </div>
       </div>
 

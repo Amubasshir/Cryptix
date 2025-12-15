@@ -74,16 +74,16 @@ const FAQ = () => {
   const rightFaqs = faqs.slice(4, 8);
 
   return (
-    <section className="text-white border px-3 lg:px-0 border-gray-800" id='FAQ'>
+    <section className="text-white border px-3 lg:px-0 border-[#1d1d22]" id='FAQ'>
       {/* Header */}
-      <div className="border-b border-gray-800">
+      <div className="border-b border-[#1d1d22]">
         <div
           ref={headerRef}
-          className={`max-w-[1184px] text-center lg:text-start mx-auto flex flex-col lg:flex-row items-start lg:items-end border-l border-r border-gray-800 transition-all duration-700 ease-out
+          className={`max-w-[1184px] text-center lg:text-start mx-auto flex flex-col lg:flex-row items-start lg:items-end border-l border-r border-[#1d1d22] transition-all duration-700 ease-out
             ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}
           `}
         >
-          <div className="border-gray-800 w-full lg:max-w-4xl p-5 lg:pr-20">
+          <div className=" w-full lg:max-w-4xl p-6 lg:pr-20 border-r border-[#1d1d22]">
             <h2 className="text-[24px] lg:text-[40px] font-normal mb-4 tracking-wide">
               Your Questions, Answered
             </h2>
@@ -91,11 +91,11 @@ const FAQ = () => {
               Find everything you need to know about Cryptix, from security to supported assets.
             </p>
           </div>
-          <div className="w-full lg:w-[52.9%] border-l border-gray-800">
-            <div className="border-b hidden lg:flex border-gray-800 py-9 w-full"></div>
+          <div className="w-full lg:w-[52.9%] ">
+            <div className=" hidden lg:flex border-[#1d1d22] py-9 w-full"></div>
             <a
               href="#"
-              className="hidden md:flex border-t  border-gray-800 gap-2 justify-center lg:justify-end items-center p-6 text-[#00ffb2] font-medium whitespace-nowrap w-full transition-all duration-700 ease-out hover:bg-green-400/5"
+              className="flex items-center justify-center lg:justify-start gap-3 p-6 border-t border-[#1d1d22] text-[#00ffb2] font-medium group hover:bg-green-400/5 transition-colors duration-300 "
             >
               Create account now
               <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -105,7 +105,7 @@ const FAQ = () => {
       </div>
       
       {/* FAQ Grid */}
-      <div className="max-w-[1184px] mx-auto grid grid-cols-1 lg:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-800 border-l border-r border-gray-800 border-b">
+      <div className="max-w-[1184px] mx-auto grid grid-cols-1 lg:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-[#1d1d22] border-l border-r border-[#1d1d22] border-b">
         <div className="flex flex-col">
           {leftFaqs.map((faq) => (
             <FAQItem key={faq.id} faq={faq} isOpen={openId === faq.id} toggle={() => toggleFAQ(faq.id)} />
@@ -160,7 +160,7 @@ const FAQItem = ({ faq, isOpen, toggle }) => {
   };
 
   return (
-    <div className="border-b border-gray-800 last:border-b-0 md:last:border-b-0 group hover:bg-white/[0.02] transition-colors duration-300 py-6">
+    <div className="border-b border-[#1d1d22] last:border-b-0 md:last:border-b-0 group hover:bg-white/[0.02] transition-colors duration-300 py-6">
       
       <button
         onClick={toggle}
