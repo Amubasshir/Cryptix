@@ -90,7 +90,7 @@ const TestimonialGrid = () => {
         {/* Header Section */}
         <div className="text-center ">
           <div className="py-7 text-center border-l border-r max-w-[1184px] mx-auto border-[#1d1d22]">
-            <h2 className="text-[24px] lg:text-[40px] font-normal leading-9 mb-5 text-[#f5f5f5] tracking-wide">
+            <h2 className="text-[24px] lg:text-[40px] font-normal leading-9 mb-5 text-[#f5f5f5] md:tracking-wide">
               Trusted by Crypto Enthusiasts Worldwide
             </h2>
             <p className="text-[#d5d5d5] md:text-[16px] text-base leading-5 font-normal max-w-6xl mx-auto lg:px-0 px-3 ">

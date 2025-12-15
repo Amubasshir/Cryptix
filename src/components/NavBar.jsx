@@ -112,7 +112,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center z-50">
             <button
               onClick={() => setOpen(!open)}
-              className="focus:outline-none text-white p-2 relative w-12 h-10 flex items-center justify-center"
+              className="focus:outline-none text-white  relative  h-10 flex items-center justify-center"
             >
               <motion.div
                 className="w-8 flex flex-col items-end gap-[6px]"
