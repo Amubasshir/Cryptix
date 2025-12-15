@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 const testimonials = [
   {
     id: 1,
-    name: "Danielle R.",
-    role: "Blockchain enthusiast",
-    // একাধিক ছবি (আগের মতো)
+    name: "Alex M.",
+    role: "Blockchain Analyst at NovaChain",
+    
     avatars: [
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -16,9 +16,9 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Michael T.",
-    role: "DeFi Investor",
-    // একাধিক ছবি
+    name: "Sophie L.",
+    role: "Lead Developer at Quantum Ledger",
+  
     avatars: [
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -27,9 +27,9 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Sarah L.",
-    role: "Day Trader",
-    // এখানে মাত্র ১টি ছবি দেওয়া হলো (আপনার রিকোয়ারমেন্ট অনুযায়ী)
+    name: "Danielle R.",
+    role: "Blockchain enthusiast",
+   
     avatars: [
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
     ],
@@ -102,7 +102,7 @@ const TestimonialGrid = () => {
         <div className="border-t border-[#1d1d22] w-full">
            <div className="max-w-[1184px] mx-auto border-x border-[#1d1d22]">
           {/* Grid Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 min-h-[440px]">
+          <div className="grid grid-cols-1 lg:grid-cols-3 min-h-[430px]">
             
             {/* Left: Active Testimonial Card */}
             <div className="lg:col-span-2 p-8 md:p-[40px] lg:border-r  border-[#1d1d22] relative overflow-hidden">
@@ -125,7 +125,7 @@ const TestimonialGrid = () => {
                         key={index}
                         src={imgSrc} 
                         alt="User Avatar" 
-                        className={`w-14 h-14 rounded-full object-cover border-2 border-[#1d1d22] ${index > 0 ? '-ml-5' : ''}`}
+                        className={`w-13 h-13 rounded-full object-cover border-2 border-[#1d1d22] ${index > 0 ? '-ml-5' : ''}`}
                       />
                     ))}
                   </motion.div>
@@ -146,8 +146,8 @@ const TestimonialGrid = () => {
                   {/* Author Info */}
                   <motion.div variants={fadeInVariants} className="flex items-end justify-between">
                     <div>
-                      <div className="font-semibold text-white text-[18px]">{currentTestimonial.name}</div>
-                      <div className="text-[#d5d5d5] text-[16px] font-normal mt-1">{currentTestimonial.role}</div>
+                      <div className="font-medium text-white text-[18px]">{currentTestimonial.name}</div>
+                      <div className="text-[#d5d5d5] text-[16px] font-normal">{currentTestimonial.role}</div>
                     </div>
                     <div className="text-[#d5d5d5] text-[16px] font-[dm-sans] font-medium px-3 py-1">
                       {currentIndex + 1}/{testimonials.length}
